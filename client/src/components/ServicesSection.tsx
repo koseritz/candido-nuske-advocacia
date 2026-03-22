@@ -4,7 +4,8 @@
  * Inspirado na seção "De qual destes serviços você precisa?" da Arraes & Centeno
  */
 import { motion } from "framer-motion";
-import { FileText, AlertTriangle, HeartPulse, HardHat, Users, Brain } from "lucide-react";
+import { FileText, AlertTriangle, HeartPulse, HardHat, Users, Brain, ArrowRight } from "lucide-react";
+import { Link } from "wouter";
 
 const JUSTICE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/justice-abstract-ZGArDhsQquBqbZy4TbWTwx.webp";
 
@@ -13,6 +14,7 @@ const services = [
     icon: FileText,
     title: "Planejamento de Aposentadoria",
     description: "Um estudo único e individualizado, feito por nossos especialistas, com o critério técnico e conhecimento necessários à sua aposentadoria.",
+    link: "/previdenciario",
   },
   {
     icon: AlertTriangle,
@@ -100,14 +102,24 @@ export default function ServicesSection() {
               <p className="text-muted-foreground text-sm leading-relaxed mb-5">
                 {service.description}
               </p>
-              <a
-                href="https://wa.me/5551992851828"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-navy text-white text-sm font-medium rounded-full hover:bg-navy-light transition-colors"
-              >
-                Saber mais
-              </a>
+              {(service as any).link ? (
+                <Link
+                  href={(service as any).link}
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-navy text-white text-sm font-medium rounded-full hover:bg-navy-light transition-colors"
+                >
+                  Saber mais
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              ) : (
+                <a
+                  href="https://wa.me/5551992851828"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-navy text-white text-sm font-medium rounded-full hover:bg-navy-light transition-colors"
+                >
+                  Saber mais
+                </a>
+              )}
             </motion.div>
           ))}
         </div>
