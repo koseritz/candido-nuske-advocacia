@@ -13,6 +13,7 @@ const navLinks = [
   { label: "Quem Somos", href: "#quem-somos" },
   { label: "Áreas de Atuação", href: "#areas" },
   { label: "Serviços", href: "#servicos" },
+  { label: "Blog", href: "/blog" },
   { label: "Depoimentos", href: "#depoimentos" },
   { label: "Contato", href: "#contato" },
 ];

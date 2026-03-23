@@ -6,6 +6,8 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import Previdenciario from "./pages/Previdenciario";
+import Blog from "./pages/Blog";
+import BlogArticle from "./pages/BlogArticle";
 
 
 function Router() {
@@ -13,6 +15,8 @@ function Router() {
     <Switch>
       <Route path={"/"} component={Home} />
       <Route path={"/previdenciario"} component={Previdenciario} />
+      <Route path={"/blog"} component={Blog} />
+      <Route path={"/blog/:id"} component={BlogArticle} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
