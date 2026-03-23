@@ -80,40 +80,42 @@ const articles: Record<string, Article> = {
     category: "Previdenciário",
     readTime: "6 min",
     image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/blog-auxilio-acidente-real-3PSaWH6MSa3BxmdWyq9djJ.webp",
-    content: `
-      <h2>O que é Auxílio-Acidente?</h2>
-      <p>O auxílio-acidente é um benefício previdenciário destinado ao segurado que sofre um acidente de trabalho ou doença ocupacional e fica com sequelas que reduzem sua capacidade de trabalho. Diferente da aposentadoria por invalidez, o auxílio-acidente permite que o trabalhador continue exercendo suas atividades.</p>
+    content: `<h2>1. O Infortúnio que Não Avisa e o Direito que Poucos Usam</h2>
+<p>Imagine a seguinte situação: um domingo de lazer em família termina em um acidente doméstico ou em uma colisão no trânsito. O susto imediato passa, mas a recuperação deixa uma marca permanente — uma limitação no movimento do braço, uma perda de força ou um desgaste que antes não existia. Para muitos brasileiros, esse é o fim da história. No entanto, o que a maioria desconhece é que essas sequelas podem gerar um direito a uma compensação financeira mensal de longo prazo. O erro mais comum é acreditar que esse benefício, chamado auxílio-acidente, serve apenas para quem se machuca "dentro da empresa". A verdade é que este é um dos recursos mais estratégicos da Previdência Social, funcionando como um amparo que pode durar décadas, cessando apenas com a jubilação (aposentadoria) ou óbito.</p>
 
-      <h2>Quem tem Direito?</h2>
-      <p>Tem direito ao auxílio-acidente o segurado que:</p>
-      <ul>
-        <li>Sofreu acidente de trabalho ou doença ocupacional</li>
-        <li>Apresenta sequelas que reduzem sua capacidade de trabalho</li>
-        <li>Está filiado ao INSS há pelo menos 12 meses</li>
-        <li>Já recebeu auxílio-doença por mais de 15 dias</li>
-      </ul>
+<h2>2. Não é só sobre trabalho: O "Acidente de Qualquer Natureza"</h2>
+<p>Desde a promulgação da Lei 8.213/1991, o auxílio-acidente deixou de ser restrito ao ambiente laboral. Hoje, a proteção abrange o chamado "acidente de qualquer natureza", o que inclui incidentes ocorridos em casa, no lazer, em atividades esportivas ou no trânsito. O fator determinante para o INSS não é o local ou a hora do evento, mas sim a natureza da lesão: ela deve ser traumática ou súbita.</p>
+<p>É importante destacar que o benefício também cobre as chamadas doenças do trabalho ou ocupacionais (como a LER/DORT), desde que comprovado o nexo causal entre a atividade e a sequela. Isso diferencia o acidente das doenças puramente degenerativas, que não dão direito a este benefício específico. Essa expansão do direito, que passou a incluir também os empregados domésticos em 2015 (através da Lei Complementar 150), reflete o conceito de justiça social da Constituição de 1988, protegendo o indivíduo contra o risco social da perda de integridade física, independentemente da origem do trauma.</p>
 
-      <h2>Como Solicitar</h2>
-      <p>O processo de solicitação envolve os seguintes passos:</p>
-      <ol>
-        <li>Compareça ao INSS com a documentação necessária</li>
-        <li>Solicite o agendamento para perícia médica</li>
-        <li>Realize a perícia com o médico do INSS</li>
-        <li>Aguarde a decisão do INSS</li>
-      </ol>
+<h2>3. O Benefício que Você Recebe Enquanto Trabalha</h2>
+<p>Uma das características mais fundamentais do auxílio-acidente é a sua natureza indenizatória. Ao contrário do auxílio por incapacidade temporária (antigo auxílio-doença), que visa substituir o seu salário enquanto você está afastado, o auxílio-acidente é uma compensação. Isso significa que o segurado pode — e deve — continuar trabalhando e recebendo seu salário normalmente enquanto recebe o benefício do INSS.</p>
+<p><strong>"Diferente de outras prestações previdenciárias que visam substituir o rendimento do trabalho, o auxílio-acidente coexiste com o salário, funcionando como uma compensação financeira pela redução da eficiência laborativa."</strong></p>
+<p>O valor não é suspenso pelo retorno ao trabalho e, por ser uma indenização, não é tributado pelo Imposto de Renda, funcionando como um reforço financeiro pelo maior esforço que o trabalhador agora precisa despender para realizar suas funções.</p>
 
-      <h2>Documentos Necessários</h2>
-      <ul>
-        <li>Documento de identidade e CPF</li>
-        <li>Carteira de trabalho</li>
-        <li>Comprovante de residência</li>
-        <li>Relatório médico descrevendo as sequelas</li>
-        <li>Exames complementares</li>
-      </ul>
+<h2>4. Sem Tempo de Espera: A Isenção de Carência</h2>
+<p>Para a maioria dos benefícios do INSS, exige-se um número mínimo de contribuições (carência). No auxílio-acidente, vigora a regra da "carência zero". Se um trabalhador sofrer um acidente logo no seu primeiro dia de emprego formal, ele já possui cobertura previdenciária.</p>
+<p>Essa segurança é fundamental e se estende inclusive para quem está no "período de graça". Esse é o intervalo (que varia de 12 a 36 meses) no qual o trabalhador mantém todos os seus direitos perante o INSS mesmo após parar de contribuir, seja por desemprego ou término de contrato. Se o acidente ocorrer dentro dessa janela de proteção, o direito à indenização permanece intacto.</p>
 
-      <h2>Conclusão</h2>
-      <p>Se você sofreu um acidente de trabalho e ficou com sequelas, você pode ter direito ao auxílio-acidente. Entre em contato conosco para uma análise do seu caso.</p>
-    `,
+<h2>5. Até a Perda Mínima Conta: O Entendimento do STJ</h2>
+<p>Muitos segurados deixam de buscar o benefício por acreditarem que sua sequela é "pequena demais" para ser indenizada. No entanto, o entendimento consolidado do Superior Tribunal de Justiça (STJ), através do Tema Repetitivo 156, encerrou anos de discussões judiciais: não importa o percentual da sequela. Se houve redução da capacidade laborativa ou se o trabalhador precisa de maior esforço para realizar as mesmas tarefas, o direito existe.</p>
+<p>A perícia médica analisa o contexto profissional. A perda de um dedo tem um impacto funcional devastador para um cirurgião ou um pianista, enquanto para um gestor administrativo o impacto biomecânico é diferente. O que a lei protege não é apenas a integridade física em si, mas a perda da funcionalidade em relação à profissão que o segurado exercia no momento do trauma.</p>
+
+<h2>6. Um Investimento na Aposentadoria Futura</h2>
+<p>O auxílio-acidente é um benefício estratégico para a estabilidade econômica a longo prazo. O valor corresponde a 50% do salário-de-benefício — que, após a Reforma da Previdência de 2019 (EC 103), é calculado com base na média aritmética de 100% de todas as contribuições do segurado desde julho de 1994.</p>
+<p>A grande vantagem é que o valor mensal do auxílio-acidente integra o salário de contribuição para fins de cálculo de aposentadoria futura. Funciona em uma lógica de "benefício-sobre-benefício": se você recebe um salário de R\$ 3.000,00 e um auxílio-acidente de R\$ 1.500,00, o INSS considerará que sua base de contribuição é de R\$ 4.500,00. No momento de se aposentar, sua média será muito superior. É importante esclarecer que o trabalhador não paga INSS sobre o valor do auxílio; essa integração é um bônus legal que eleva o valor final da sua futura aposentadoria.</p>
+
+<h2>7. O Lado B: Quem Fica de Fora da Proteção?</h2>
+<p>Apesar de sua importância social, a legislação brasileira ainda exclui certas categorias, o que é alvo de fortes críticas doutrinárias. Atualmente, não possuem direito ao auxílio-acidente:</p>
+<ul>
+<li><strong>Contribuintes Individuais:</strong> Autônomos, profissionais liberais e empresários.</li>
+<li><strong>Segurados Facultativos:</strong> Estudantes ou donas de casa que contribuem por conta própria.</li>
+</ul>
+<p>A justificativa estatal para essa exclusão reside na "ausência de fonte de custeio específica" e na dificuldade de fiscalização da redução da capacidade funcional nesses grupos. Para os juristas, essa distinção fere a isonomia, já que o risco de um acidente impactar a vida laboral é igual para todos os trabalhadores.</p>
+
+<h2>8. Conclusão: Cidadania e Vigilância</h2>
+<p>É vital compreender dois marcos temporais importantes: o auxílio-acidente é pago até a véspera da aposentadoria. Desde 1997 (Lei 9.528), é proibido acumular os dois valores, exceto para acidentes ocorridos antes daquela data, em respeito ao direito adquirido. Portanto, o benefício funciona como uma ponte financeira até o momento da sua jubilação.</p>
+<p>O auxílio-acidente não é uma caridade, mas um direito garantido pela sua qualidade de segurado. Para buscá-lo, o passo inicial é organizar seu Prontuário Médico de Evolução — o documento que detalha todo o histórico do seu tratamento e a consolidação da lesão. Revise seus laudos e históricos de acidentes passados; a justiça social começa com a sua vigilância.</p>
+<p><strong>Se a lei reconhece que seu esforço agora é maior para realizar as mesmas tarefas, por que você ainda não buscou a compensação que é sua por direito?</strong></p>`,
   },
   "doenca-ocupacional-inss": {
     id: "doenca-ocupacional-inss",
