@@ -17,6 +17,7 @@ interface BlogPost {
   image: string;
 }
 
+// Blog articles with custom images related to each topic
 const blogPosts: BlogPost[] = [
   {
     id: "aposentadoria-anticipada",
@@ -26,7 +27,7 @@ const blogPosts: BlogPost[] = [
     author: "Dr. Cândido Nüske",
     category: "Previdenciário",
     readTime: "5 min",
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/office-interior-WjvXPx29Lxi3PJtChZXf4V.webp",
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/blog-aposentadoria-antecipada-fqCGwVokcAQUqDSsqzbqmf.webp",
   },
   {
     id: "auxilio-acidente-direitos",
@@ -36,7 +37,7 @@ const blogPosts: BlogPost[] = [
     author: "Dr. Cândido Nüske",
     category: "Previdenciário",
     readTime: "6 min",
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/team-meeting-WjvXPx29Lxi3PJtChZXf4V.webp",
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/blog-auxilio-acidente-28kP5iqR68FghUCPKj5tB9.webp",
   },
   {
     id: "doenca-ocupacional-inss",
@@ -46,7 +47,7 @@ const blogPosts: BlogPost[] = [
     author: "Dr. Cândido Nüske",
     category: "Trabalhista",
     readTime: "7 min",
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/justice-abstract-WjvXPx29Lxi3PJtChZXf4V.webp",
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/blog-doenca-ocupacional-SaijCoLkLaTtiAaUPBf4Sw.webp",
   },
   {
     id: "revisao-aposentadoria",
@@ -56,7 +57,7 @@ const blogPosts: BlogPost[] = [
     author: "Dr. Cândido Nüske",
     category: "Previdenciário",
     readTime: "8 min",
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/client-consultation-WjvXPx29Lxi3PJtChZXf4V.webp",
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/blog-revisao-aposentadoria-4EcHKesbLApR45zArmCRsM.webp",
   },
   {
     id: "direitos-trabalhador-demissao",
@@ -66,7 +67,7 @@ const blogPosts: BlogPost[] = [
     author: "Dr. Cândido Nüske",
     category: "Trabalhista",
     readTime: "6 min",
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/hero-lawyer-WjvXPx29Lxi3PJtChZXf4V.webp",
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/blog-direitos-trabalhador-e9GNQKNPThVfqcby9zaURu.webp",
   },
   {
     id: "planejamento-previdenciario-beneficios",
@@ -76,7 +77,7 @@ const blogPosts: BlogPost[] = [
     author: "Dr. Cândido Nüske",
     category: "Previdenciário",
     readTime: "5 min",
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/office-interior-WjvXPx29Lxi3PJtChZXf4V.webp",
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/blog-beneficios-planejamento-JcUgHTBXgKFyk7YLZU7JHT.webp",
   },
 ];
 

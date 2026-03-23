@@ -27,7 +27,7 @@ const articles: Record<string, Article> = {
     author: "Dr. Cândido Nüske",
     category: "Previdenciário",
     readTime: "5 min",
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/office-interior-WjvXPx29Lxi3PJtChZXf4V.webp",
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/blog-aposentadoria-antecipada-fqCGwVokcAQUqDSsqzbqmf.webp",
     content: `
       <h2>O que é Aposentadoria Antecipada?</h2>
       <p>A aposentadoria antecipada é um benefício previdenciário que permite ao trabalhador se aposentar antes de atingir a idade mínima estabelecida pela legislação. Existem várias modalidades de aposentadoria antecipada, cada uma com seus próprios critérios e requisitos.</p>
@@ -79,7 +79,7 @@ const articles: Record<string, Article> = {
     author: "Dr. Cândido Nüske",
     category: "Previdenciário",
     readTime: "6 min",
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/team-meeting-WjvXPx29Lxi3PJtChZXf4V.webp",
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/blog-auxilio-acidente-28kP5iqR68FghUCPKj5tB9.webp",
     content: `
       <h2>O que é Auxílio-Acidente?</h2>
       <p>O auxílio-acidente é um benefício previdenciário destinado ao segurado que sofre um acidente de trabalho ou doença ocupacional e fica com sequelas que reduzem sua capacidade de trabalho. Diferente da aposentadoria por invalidez, o auxílio-acidente permite que o trabalhador continue exercendo suas atividades.</p>
@@ -157,7 +157,7 @@ const articles: Record<string, Article> = {
     author: "Dr. Cândido Nüske",
     category: "Previdenciário",
     readTime: "8 min",
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/client-consultation-WjvXPx29Lxi3PJtChZXf4V.webp",
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/blog-revisao-aposentadoria-4EcHKesbLApR45zArmCRsM.webp",
     content: `
       <h2>O que é Revisão da Aposentadoria?</h2>
       <p>A revisão da aposentadoria é um processo legal que permite ao aposentado requerer o recálculo do seu benefício, visando aumentar o valor mensal recebido.</p>
@@ -181,7 +181,7 @@ const articles: Record<string, Article> = {
     author: "Dr. Cândido Nüske",
     category: "Trabalhista",
     readTime: "6 min",
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/hero-lawyer-WjvXPx29Lxi3PJtChZXf4V.webp",
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/blog-direitos-trabalhador-e9GNQKNPThVfqcby9zaURu.webp",
     content: `
       <h2>Direitos na Demissão</h2>
       <p>Quando você é demitido, tem direitos que precisam ser respeitados. Conheça todos eles.</p>
@@ -198,7 +198,7 @@ const articles: Record<string, Article> = {
     author: "Dr. Cândido Nüske",
     category: "Previdenciário",
     readTime: "5 min",
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/office-interior-WjvXPx29Lxi3PJtChZXf4V.webp",
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/blog-beneficios-planejamento-JcUgHTBXgKFyk7YLZU7JHT.webp",
     content: `
       <h2>Os 5 Benefícios do Planejamento Previdenciário</h2>
       <p>Descubra como um planejamento adequado pode transformar sua aposentadoria.</p>
