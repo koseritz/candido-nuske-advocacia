@@ -12,13 +12,13 @@ export default function HeroSection() {
   return (
     <section className="relative bg-white pt-8 lg:pt-12 pb-8 lg:pb-12 overflow-hidden">
       <div className="container">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-4 lg:gap-12 items-center">
           {/* Text Content */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
-            className="order-1 lg:order-1"
+            className="order-2 lg:order-1"
           >
             <h1 className="font-serif text-3xl sm:text-4xl lg:text-[2.75rem] xl:text-5xl leading-tight text-navy mb-6">
               Advogados especialistas em aposentadorias e direitos do trabalhador, dedicados a garantir a proteção e os benefícios que você merece.
@@ -81,13 +81,13 @@ export default function HeroSection() {
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            className="order-2 lg:order-2 relative"
+            className="order-1 lg:order-2 relative"
           >
             <div className="relative rounded-2xl overflow-hidden lg:rounded-bl-[4rem] bg-gradient-to-b from-ice to-white">
               <img
                 src={HERO_IMG}
                 alt="Dr. Cândido Nüske - Advogado"
-                className="w-full h-auto max-h-[50vh] lg:max-h-[70vh] object-contain object-bottom lg:pb-[321px]" style={{marginTop: '2px'}}
+                className="w-full h-auto lg:max-h-[90vh] object-contain object-bottom lg:pb-[321px]" style={{marginTop: '2px'}}
               />
             </div>
 
