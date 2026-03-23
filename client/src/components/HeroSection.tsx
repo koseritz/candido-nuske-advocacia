@@ -41,9 +41,9 @@ export default function HeroSection() {
             </div>
 
             {/* Trust Badges */}
-            <div className="flex flex-wrap items-center gap-6">
+            <div className="flex flex-wrap items-center gap-3 mt-6">
               {/* Google Reviews */}
-              <div className="flex items-center gap-3 bg-ice rounded-xl px-4 py-3">
+              <div className="flex items-center gap-3 bg-ice rounded-xl px-3 py-2">
                 <div>
                   <svg viewBox="0 0 24 24" className="w-6 h-6" fill="none" style={{paddingTop: '2px', marginTop: '-1px', marginBottom: '4px', width: '28px', height: '38px'}}>
                     <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/>
@@ -66,7 +66,7 @@ export default function HeroSection() {
               </div>
 
               {/* OAB Badge */}
-              <div className="flex items-center gap-2 bg-ice rounded-xl px-4 py-3">
+              <div className="flex items-center gap-2 bg-ice rounded-xl px-3 py-2">
                 <MapPin className="w-5 h-5 text-gold" />
                 <div>
                   <p className="font-semibold text-navy text-sm">OAB/RS 7.089</p>
