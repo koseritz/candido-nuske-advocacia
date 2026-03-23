@@ -87,7 +87,7 @@ export default function HeroSection() {
               <img
                 src={HERO_IMG}
                 alt="Dr. Cândido Nüske - Advogado"
-                className="w-full h-[400px] lg:h-[560px] object-contain object-bottom" style={{marginTop: '2px', width: '583px', height: '780px'}}
+                className="w-full h-[400px] lg:h-[560px] object-contain object-bottom" style={{marginTop: '2px', width: '583px', height: '780px', paddingBottom: '321px'}}
               />
             </div>
             {/* Decorative element */}
