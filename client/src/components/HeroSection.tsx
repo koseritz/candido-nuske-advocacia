@@ -6,7 +6,7 @@
 import { Phone, Star, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 
-const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/hero-lawyer-muKbqCvXNQ2rGbPs5KRdVt.webp";
+const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/candido-photo-nobg_57466052.png";
 
 export default function HeroSection() {
   return (
@@ -83,14 +83,12 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             className="order-1 lg:order-2 relative"
           >
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-navy/10 lg:rounded-bl-[4rem]">
+            <div className="relative rounded-2xl overflow-hidden lg:rounded-bl-[4rem] bg-gradient-to-b from-ice to-white">
               <img
                 src={HERO_IMG}
                 alt="Dr. Cândido Nüske - Advogado"
-                className="w-full h-[400px] lg:h-[560px] object-cover object-top"
+                className="w-full h-[400px] lg:h-[560px] object-contain object-bottom"
               />
-              {/* Overlay gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-navy/20 to-transparent" />
             </div>
             {/* Decorative element */}
             <div className="hidden lg:block absolute -bottom-4 -left-4 w-24 h-24 bg-gold/10 rounded-2xl -z-10" />

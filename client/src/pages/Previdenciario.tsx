@@ -26,7 +26,7 @@ const LOGO_URL =
 const LOGO_WHITE =
   "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/Logotipo_Dr_Cândido_Nuske_adv_simp_branco_4af1dae0.webp";
 const HERO_IMG =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/hero-lawyer-muKbqCvXNQ2rGbPs5KRdVt.webp";
+  "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/candido-photo-nobg_57466052.png";
 const OFFICE_IMG =
   "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/office-interior-3J3tza3LGJVDXFjKGCLstJ.webp";
 
@@ -558,7 +558,7 @@ export default function Previdenciario() {
                 <img
                   src={HERO_IMG}
                   alt="Dr. Cândido Nüske"
-                  className="w-full aspect-[3/4] object-cover object-top grayscale contrast-[1.08] brightness-105 mix-blend-screen"
+                  className="w-full aspect-[3/4] object-contain object-bottom"
                 />
               </motion.div>
 
