@@ -45,7 +45,7 @@ export default function HeroSection() {
               {/* Google Reviews */}
               <div className="flex items-center gap-3 bg-ice rounded-xl px-4 py-3">
                 <div>
-                  <svg viewBox="0 0 24 24" className="w-6 h-6" fill="none">
+                  <svg viewBox="0 0 24 24" className="w-6 h-6" fill="none" style={{paddingTop: '2px', marginTop: '-1px', marginBottom: '4px', width: '28px', height: '38px'}}>
                     <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/>
                     <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
                     <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
@@ -54,14 +54,14 @@ export default function HeroSection() {
                 </div>
                 <div>
                   <div className="flex items-center gap-1">
-                    <span className="font-bold text-navy text-sm">4.9</span>
+                    <span className="font-bold text-navy text-sm" style={{fontSize: '34px'}}>5</span>
                     <div className="flex">
                       {[...Array(5)].map((_, i) => (
                         <Star key={i} className="w-3.5 h-3.5 fill-yellow-400 text-yellow-400" />
                       ))}
                     </div>
                   </div>
-                  <p className="text-xs text-muted-foreground">+ de 1.000 avaliações</p>
+                  <p className="text-xs text-muted-foreground">100% avaliações</p>
                 </div>
               </div>
 
@@ -87,7 +87,7 @@ export default function HeroSection() {
               <img
                 src={HERO_IMG}
                 alt="Dr. Cândido Nüske - Advogado"
-                className="w-full h-[400px] lg:h-[560px] object-contain object-bottom"
+                className="w-full h-[400px] lg:h-[560px] object-contain object-bottom" style={{marginTop: '2px', width: '583px', height: '780px'}}
               />
             </div>
             {/* Decorative element */}

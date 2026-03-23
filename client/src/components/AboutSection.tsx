@@ -37,7 +37,7 @@ export default function AboutSection() {
               Descubra como podemos ajudar na sua causa!
             </h2>
             <p className="text-muted-foreground text-base lg:text-lg leading-relaxed mb-6">
-              Com 17 anos de experiência, o advogado Dr. Cândido Nüske tem se dedicado a atender clientes em questões de extrema relevância. Sua vasta experiência prática lhe permitiu adquirir um conhecimento profundo das leis e julgamentos atuais, garantindo assim a proteção dos direitos de seus clientes.
+              Com 18 anos de experiência, o advogado Dr. Cândido Nüske tem se dedicado a atender clientes em questões de extrema relevância. Sua vasta experiência prática lhe permitiu adquirir um conhecimento profundo das leis e julgamentos atuais, garantindo assim a proteção dos direitos de seus clientes.
             </p>
             <p className="text-muted-foreground text-base lg:text-lg leading-relaxed mb-8">
               Com uma abordagem centrada no cliente e em suas necessidades específicas, Dr. Cândido Nüske e toda sua equipe têm ajudado pessoas e empresas de todos os portes nos desafios legais a encontrar soluções eficazes para a proteção do seu patrimônio.

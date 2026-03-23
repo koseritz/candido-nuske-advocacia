@@ -75,7 +75,7 @@ export default function StatsSection() {
           <StatItem value={3000} prefix="+" label="clientes atendidos" />
           <StatItem value={3500} prefix="+" label="casos de sucesso" />
           <StatItem value={27} label="estados atendidos" />
-          <StatItem value={17} prefix="+" label="anos ajudando brasileiros a conquistar direitos" />
+          <StatItem value={18} prefix="+" label="anos ajudando brasileiros a conquistar direitos" />
         </div>
       </div>
     </section>
