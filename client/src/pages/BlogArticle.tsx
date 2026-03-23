@@ -29,46 +29,46 @@ const articles: Record<string, Article> = {
     readTime: "5 min",
     image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/blog-aposentadoria-antecipada-real-7UWURce28Sdibe2mG2Fv8h.webp",
     content: `
-      <h2>O que é Aposentadoria Antecipada?</h2>
-      <p>A aposentadoria antecipada é um benefício previdenciário que permite ao trabalhador se aposentar antes de atingir a idade mínima estabelecida pela legislação. Existem várias modalidades de aposentadoria antecipada, cada uma com seus próprios critérios e requisitos.</p>
+      <h2 style="margin-top: 24px; margin-bottom: 12px;"><strong>O que é Aposentadoria Antecipada?</strong></h2>
+      <p style="margin-bottom: 16px;">A aposentadoria antecipada é um benefício previdenciário que permite ao trabalhador se aposentar antes de atingir a idade mínima estabelecida pela legislação. Existem várias modalidades de aposentadoria antecipada, cada uma com seus próprios critérios e requisitos.</p>
 
-      <h2>Tipos de Aposentadoria Antecipada</h2>
-      <h3>1. Aposentadoria por Tempo de Contribuição</h3>
-      <p>Permite que o trabalhador se aposente após cumprir um período mínimo de contribuição ao INSS, independentemente da idade. Os requisitos variam conforme o gênero e a data de filiação ao INSS.</p>
+      <h2 style="margin-top: 24px; margin-bottom: 12px;"><strong>Tipos de Aposentadoria Antecipada</strong></h2>
+      <h3 style="margin-top: 20px; margin-bottom: 12px;"><strong>1. Aposentadoria por Tempo de Contribuição</strong></h3>
+      <p style="margin-bottom: 16px;">Permite que o trabalhador se aposente após cumprir um período mínimo de contribuição ao INSS, independentemente da idade. Os requisitos variam conforme o gênero e a data de filiação ao INSS.</p>
 
-      <h3>2. Aposentadoria Especial</h3>
-      <p>Destinada a trabalhadores que exercem atividades em condições prejudiciais à saúde ou integridade física. Requer comprovação de exposição a agentes nocivos durante o período de trabalho.</p>
+      <h3 style="margin-top: 20px; margin-bottom: 12px;"><strong>2. Aposentadoria Especial</strong></h3>
+      <p style="margin-bottom: 16px;">Destinada a trabalhadores que exercem atividades em condições prejudiciais à saúde ou integridade física. Requer comprovação de exposição a agentes nocivos durante o período de trabalho.</p>
 
-      <h3>3. Aposentadoria por Invalidez</h3>
-      <p>Concedida ao segurado que se torna incapaz de exercer suas atividades laborais. Requer perícia médica do INSS para comprovação da incapacidade.</p>
+      <h3 style="margin-top: 20px; margin-bottom: 12px;"><strong>3. Aposentadoria por Invalidez</strong></h3>
+      <p style="margin-bottom: 16px;">Concedida ao segurado que se torna incapaz de exercer suas atividades laborais. Requer perícia médica do INSS para comprovação da incapacidade.</p>
 
-      <h2>Critérios Essenciais</h2>
-      <ul>
-        <li><strong>Tempo de Contribuição:</strong> Varia de acordo com a modalidade, geralmente entre 25 e 35 anos.</li>
-        <li><strong>Carência:</strong> Número mínimo de contribuições necessárias antes de requerer o benefício.</li>
-        <li><strong>Filiação ao INSS:</strong> Deve estar regularizado e em dia com as contribuições.</li>
+      <h2 style="margin-top: 24px; margin-bottom: 12px;"><strong>Critérios Essenciais</strong></h2>
+      <ul style="margin-top: 12px; margin-bottom: 16px; padding-left: 24px;">
+        <li style="margin-bottom: 8px;"><strong>Tempo de Contribuição:</strong> Varia de acordo com a modalidade, geralmente entre 25 e 35 anos.</li>
+        <li style="margin-bottom: 8px;"><strong>Carência:</strong> Número mínimo de contribuições necessárias antes de requerer o benefício.</li>
+        <li style="margin-bottom: 8px;"><strong>Filiação ao INSS:</strong> Deve estar regularizado e em dia com as contribuições.</li>
       </ul>
 
-      <h2>Como o Planejamento Previdenciário Ajuda</h2>
-      <p>Um planejamento previdenciário adequado pode antecipar sua aposentadoria em vários anos. Através de uma análise detalhada do seu histórico contributivo, é possível:</p>
-      <ul>
-        <li>Identificar oportunidades de aposentadoria que você não conhecia</li>
-        <li>Otimizar o tempo de contribuição</li>
-        <li>Maximizar o valor do seu benefício</li>
-        <li>Evitar erros que prejudiquem seu direito</li>
+      <h2 style="margin-top: 24px; margin-bottom: 12px;"><strong>Como o Planejamento Previdenciário Ajuda</strong></h2>
+      <p style="margin-bottom: 16px;">Um planejamento previdenciário adequado pode antecipar sua aposentadoria em vários anos. Através de uma análise detalhada do seu histórico contributivo, é possível:</p>
+      <ul style="margin-top: 12px; margin-bottom: 16px; padding-left: 24px;">
+        <li style="margin-bottom: 8px;">Identificar oportunidades de aposentadoria que você não conhecia</li>
+        <li style="margin-bottom: 8px;">Otimizar o tempo de contribuição</li>
+        <li style="margin-bottom: 8px;">Maximizar o valor do seu benefício</li>
+        <li style="margin-bottom: 8px;">Evitar erros que prejudiquem seu direito</li>
       </ul>
 
-      <h2>Passos para Solicitar</h2>
-      <ol>
-        <li>Consulte um especialista em direito previdenciário</li>
-        <li>Reúna toda a documentação necessária</li>
-        <li>Faça uma análise completa do seu histórico contributivo</li>
-        <li>Protocole o pedido junto ao INSS</li>
-        <li>Acompanhe o processo até a concessão do benefício</li>
+      <h2 style="margin-top: 24px; margin-bottom: 12px;"><strong>Passos para Solicitar</strong></h2>
+      <ol style="margin-top: 12px; margin-bottom: 16px; padding-left: 24px;">
+        <li style="margin-bottom: 8px;">Consulte um especialista em direito previdenciário</li>
+        <li style="margin-bottom: 8px;">Reúna toda a documentação necessária</li>
+        <li style="margin-bottom: 8px;">Faça uma análise completa do seu histórico contributivo</li>
+        <li style="margin-bottom: 8px;">Protocole o pedido junto ao INSS</li>
+        <li style="margin-bottom: 8px;">Acompanhe o processo até a concessão do benefício</li>
       </ol>
 
-      <h2>Conclusão</h2>
-      <p>A aposentadoria antecipada é um direito que muitos trabalhadores desconhecem. Com o planejamento adequado, você pode se aposentar anos antes do previsto. Não deixe esse direito passar despercebido. Entre em contato conosco para uma análise gratuita do seu caso.</p>
+      <h2 style="margin-top: 24px; margin-bottom: 12px;"><strong>Conclusão</strong></h2>
+      <p style="margin-bottom: 16px;">A aposentadoria antecipada é um direito que muitos trabalhadores desconhecem. Com o planejamento adequado, você pode se aposentar anos antes do previsto. Não deixe esse direito passar despercebido. Entre em contato conosco para uma análise gratuita do seu caso.</p>
     `,
   },
   "auxilio-acidente-direitos": {
@@ -80,42 +80,42 @@ const articles: Record<string, Article> = {
     category: "Previdenciário",
     readTime: "6 min",
     image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/blog-auxilio-acidente-real-3PSaWH6MSa3BxmdWyq9djJ.webp",
-    content: `<h2>1. O Infortúnio que Não Avisa e o Direito que Poucos Usam</h2>
-<p>Imagine a seguinte situação: um domingo de lazer em família termina em um acidente doméstico ou em uma colisão no trânsito. O susto imediato passa, mas a recuperação deixa uma marca permanente — uma limitação no movimento do braço, uma perda de força ou um desgaste que antes não existia. Para muitos brasileiros, esse é o fim da história. No entanto, o que a maioria desconhece é que essas sequelas podem gerar um direito a uma compensação financeira mensal de longo prazo. O erro mais comum é acreditar que esse benefício, chamado auxílio-acidente, serve apenas para quem se machuca "dentro da empresa". A verdade é que este é um dos recursos mais estratégicos da Previdência Social, funcionando como um amparo que pode durar décadas, cessando apenas com a jubilação (aposentadoria) ou óbito.</p>
+    content: `<h2 style="margin-top: 24px; margin-bottom: 12px;"><strong>1. O Infortúnio que Não Avisa e o Direito que Poucos Usam</strong></h2>
+<p style="margin-bottom: 16px;">Imagine a seguinte situação: um domingo de lazer em família termina em um acidente doméstico ou em uma colisão no trânsito. O susto imediato passa, mas a recuperação deixa uma marca permanente — uma limitação no movimento do braço, uma perda de força ou um desgaste que antes não existia. Para muitos brasileiros, esse é o fim da história. No entanto, o que a maioria desconhece é que essas sequelas podem gerar um direito a uma compensação financeira mensal de longo prazo. O erro mais comum é acreditar que esse benefício, chamado auxílio-acidente, serve apenas para quem se machuca "dentro da empresa". A verdade é que este é um dos recursos mais estratégicos da Previdência Social, funcionando como um amparo que pode durar décadas, cessando apenas com a jubilação (aposentadoria) ou óbito.</p>
 
-<h2>2. Não é só sobre trabalho: O "Acidente de Qualquer Natureza"</h2>
-<p>Desde a promulgação da Lei 8.213/1991, o auxílio-acidente deixou de ser restrito ao ambiente laboral. Hoje, a proteção abrange o chamado "acidente de qualquer natureza", o que inclui incidentes ocorridos em casa, no lazer, em atividades esportivas ou no trânsito. O fator determinante para o INSS não é o local ou a hora do evento, mas sim a natureza da lesão: ela deve ser traumática ou súbita.</p>
-<p>É importante destacar que o benefício também cobre as chamadas doenças do trabalho ou ocupacionais (como a LER/DORT), desde que comprovado o nexo causal entre a atividade e a sequela. Isso diferencia o acidente das doenças puramente degenerativas, que não dão direito a este benefício específico. Essa expansão do direito, que passou a incluir também os empregados domésticos em 2015 (através da Lei Complementar 150), reflete o conceito de justiça social da Constituição de 1988, protegendo o indivíduo contra o risco social da perda de integridade física, independentemente da origem do trauma.</p>
+<h2 style="margin-top: 24px; margin-bottom: 12px;"><strong>2. Não é só sobre trabalho: O "Acidente de Qualquer Natureza"</strong></h2>
+<p style="margin-bottom: 16px;">Desde a promulgação da Lei 8.213/1991, o auxílio-acidente deixou de ser restrito ao ambiente laboral. Hoje, a proteção abrange o chamado "acidente de qualquer natureza", o que inclui incidentes ocorridos em casa, no lazer, em atividades esportivas ou no trânsito. O fator determinante para o INSS não é o local ou a hora do evento, mas sim a natureza da lesão: ela deve ser traumática ou súbita.</p>
+<p style="margin-bottom: 16px;">É importante destacar que o benefício também cobre as chamadas doenças do trabalho ou ocupacionais (como a LER/DORT), desde que comprovado o nexo causal entre a atividade e a sequela. Isso diferencia o acidente das doenças puramente degenerativas, que não dão direito a este benefício específico. Essa expansão do direito, que passou a incluir também os empregados domésticos em 2015 (através da Lei Complementar 150), reflete o conceito de justiça social da Constituição de 1988, protegendo o indivíduo contra o risco social da perda de integridade física, independentemente da origem do trauma.</p>
 
-<h2>3. O Benefício que Você Recebe Enquanto Trabalha</h2>
-<p>Uma das características mais fundamentais do auxílio-acidente é a sua natureza indenizatória. Ao contrário do auxílio por incapacidade temporária (antigo auxílio-doença), que visa substituir o seu salário enquanto você está afastado, o auxílio-acidente é uma compensação. Isso significa que o segurado pode — e deve — continuar trabalhando e recebendo seu salário normalmente enquanto recebe o benefício do INSS.</p>
-<p><strong>"Diferente de outras prestações previdenciárias que visam substituir o rendimento do trabalho, o auxílio-acidente coexiste com o salário, funcionando como uma compensação financeira pela redução da eficiência laborativa."</strong></p>
-<p>O valor não é suspenso pelo retorno ao trabalho e, por ser uma indenização, não é tributado pelo Imposto de Renda, funcionando como um reforço financeiro pelo maior esforço que o trabalhador agora precisa despender para realizar suas funções.</p>
+<h2 style="margin-top: 24px; margin-bottom: 12px;"><strong>3. O Benefício que Você Recebe Enquanto Trabalha</strong></h2>
+<p style="margin-bottom: 16px;">Uma das características mais fundamentais do auxílio-acidente é a sua natureza indenizatória. Ao contrário do auxílio por incapacidade temporária (antigo auxílio-doença), que visa substituir o seu salário enquanto você está afastado, o auxílio-acidente é uma compensação. Isso significa que o segurado pode — e deve — continuar trabalhando e recebendo seu salário normalmente enquanto recebe o benefício do INSS.</p>
+<p style="margin-bottom: 16px;"><strong>"Diferente de outras prestações previdenciárias que visam substituir o rendimento do trabalho, o auxílio-acidente coexiste com o salário, funcionando como uma compensação financeira pela redução da eficiência laborativa."</strong></p>
+<p style="margin-bottom: 16px;">O valor não é suspenso pelo retorno ao trabalho e, por ser uma indenização, não é tributado pelo Imposto de Renda, funcionando como um reforço financeiro pelo maior esforço que o trabalhador agora precisa despender para realizar suas funções.</p>
 
-<h2>4. Sem Tempo de Espera: A Isenção de Carência</h2>
-<p>Para a maioria dos benefícios do INSS, exige-se um número mínimo de contribuições (carência). No auxílio-acidente, vigora a regra da "carência zero". Se um trabalhador sofrer um acidente logo no seu primeiro dia de emprego formal, ele já possui cobertura previdenciária.</p>
-<p>Essa segurança é fundamental e se estende inclusive para quem está no "período de graça". Esse é o intervalo (que varia de 12 a 36 meses) no qual o trabalhador mantém todos os seus direitos perante o INSS mesmo após parar de contribuir, seja por desemprego ou término de contrato. Se o acidente ocorrer dentro dessa janela de proteção, o direito à indenização permanece intacto.</p>
+<h2 style="margin-top: 24px; margin-bottom: 12px;"><strong>4. Sem Tempo de Espera: A Isenção de Carência</strong></h2>
+<p style="margin-bottom: 16px;">Para a maioria dos benefícios do INSS, exige-se um número mínimo de contribuições (carência). No auxílio-acidente, vigora a regra da "carência zero". Se um trabalhador sofrer um acidente logo no seu primeiro dia de emprego formal, ele já possui cobertura previdenciária.</p>
+<p style="margin-bottom: 16px;">Essa segurança é fundamental e se estende inclusive para quem está no "período de graça". Esse é o intervalo (que varia de 12 a 36 meses) no qual o trabalhador mantém todos os seus direitos perante o INSS mesmo após parar de contribuir, seja por desemprego ou término de contrato. Se o acidente ocorrer dentro dessa janela de proteção, o direito à indenização permanece intacto.</p>
 
-<h2>5. Até a Perda Mínima Conta: O Entendimento do STJ</h2>
-<p>Muitos segurados deixam de buscar o benefício por acreditarem que sua sequela é "pequena demais" para ser indenizada. No entanto, o entendimento consolidado do Superior Tribunal de Justiça (STJ), através do Tema Repetitivo 156, encerrou anos de discussões judiciais: não importa o percentual da sequela. Se houve redução da capacidade laborativa ou se o trabalhador precisa de maior esforço para realizar as mesmas tarefas, o direito existe.</p>
-<p>A perícia médica analisa o contexto profissional. A perda de um dedo tem um impacto funcional devastador para um cirurgião ou um pianista, enquanto para um gestor administrativo o impacto biomecânico é diferente. O que a lei protege não é apenas a integridade física em si, mas a perda da funcionalidade em relação à profissão que o segurado exercia no momento do trauma.</p>
+<h2 style="margin-top: 24px; margin-bottom: 12px;"><strong>5. Até a Perda Mínima Conta: O Entendimento do STJ</strong></h2>
+<p style="margin-bottom: 16px;">Muitos segurados deixam de buscar o benefício por acreditarem que sua sequela é "pequena demais" para ser indenizada. No entanto, o entendimento consolidado do Superior Tribunal de Justiça (STJ), através do Tema Repetitivo 156, encerrou anos de discussões judiciais: não importa o percentual da sequela. Se houve redução da capacidade laborativa ou se o trabalhador precisa de maior esforço para realizar as mesmas tarefas, o direito existe.</p>
+<p style="margin-bottom: 16px;">A perícia médica analisa o contexto profissional. A perda de um dedo tem um impacto funcional devastador para um cirurgião ou um pianista, enquanto para um gestor administrativo o impacto biomecânico é diferente. O que a lei protege não é apenas a integridade física em si, mas a perda da funcionalidade em relação à profissão que o segurado exercia no momento do trauma.</p>
 
-<h2>6. Um Investimento na Aposentadoria Futura</h2>
-<p>O auxílio-acidente é um benefício estratégico para a estabilidade econômica a longo prazo. O valor corresponde a 50% do salário-de-benefício — que, após a Reforma da Previdência de 2019 (EC 103), é calculado com base na média aritmética de 100% de todas as contribuições do segurado desde julho de 1994.</p>
-<p>A grande vantagem é que o valor mensal do auxílio-acidente integra o salário de contribuição para fins de cálculo de aposentadoria futura. Funciona em uma lógica de "benefício-sobre-benefício": se você recebe um salário de R\$ 3.000,00 e um auxílio-acidente de R\$ 1.500,00, o INSS considerará que sua base de contribuição é de R\$ 4.500,00. No momento de se aposentar, sua média será muito superior. É importante esclarecer que o trabalhador não paga INSS sobre o valor do auxílio; essa integração é um bônus legal que eleva o valor final da sua futura aposentadoria.</p>
+<h2 style="margin-top: 24px; margin-bottom: 12px;"><strong>6. Um Investimento na Aposentadoria Futura</strong></h2>
+<p style="margin-bottom: 16px;">O auxílio-acidente é um benefício estratégico para a estabilidade econômica a longo prazo. O valor corresponde a 50% do salário-de-benefício — que, após a Reforma da Previdência de 2019 (EC 103), é calculado com base na média aritmética de 100% de todas as contribuições do segurado desde julho de 1994.</p>
+<p style="margin-bottom: 16px;">A grande vantagem é que o valor mensal do auxílio-acidente integra o salário de contribuição para fins de cálculo de aposentadoria futura. Funciona em uma lógica de "benefício-sobre-benefício": se você recebe um salário de R\$ 3.000,00 e um auxílio-acidente de R\$ 1.500,00, o INSS considerará que sua base de contribuição é de R\$ 4.500,00. No momento de se aposentar, sua média será muito superior. É importante esclarecer que o trabalhador não paga INSS sobre o valor do auxílio; essa integração é um bônus legal que eleva o valor final da sua futura aposentadoria.</p>
 
-<h2>7. O Lado B: Quem Fica de Fora da Proteção?</h2>
-<p>Apesar de sua importância social, a legislação brasileira ainda exclui certas categorias, o que é alvo de fortes críticas doutrinárias. Atualmente, não possuem direito ao auxílio-acidente:</p>
-<ul>
-<li><strong>Contribuintes Individuais:</strong> Autônomos, profissionais liberais e empresários.</li>
-<li><strong>Segurados Facultativos:</strong> Estudantes ou donas de casa que contribuem por conta própria.</li>
+<h2 style="margin-top: 24px; margin-bottom: 12px;"><strong>7. O Lado B: Quem Fica de Fora da Proteção?</strong></h2>
+<p style="margin-bottom: 16px;">Apesar de sua importância social, a legislação brasileira ainda exclui certas categorias, o que é alvo de fortes críticas doutrinárias. Atualmente, não possuem direito ao auxílio-acidente:</p>
+<ul style="margin-top: 12px; margin-bottom: 16px; padding-left: 24px;">
+<li style="margin-bottom: 8px;"><strong>Contribuintes Individuais:</strong> Autônomos, profissionais liberais e empresários.</li>
+<li style="margin-bottom: 8px;"><strong>Segurados Facultativos:</strong> Estudantes ou donas de casa que contribuem por conta própria.</li>
 </ul>
-<p>A justificativa estatal para essa exclusão reside na "ausência de fonte de custeio específica" e na dificuldade de fiscalização da redução da capacidade funcional nesses grupos. Para os juristas, essa distinção fere a isonomia, já que o risco de um acidente impactar a vida laboral é igual para todos os trabalhadores.</p>
+<p style="margin-bottom: 16px;">A justificativa estatal para essa exclusão reside na "ausência de fonte de custeio específica" e na dificuldade de fiscalização da redução da capacidade funcional nesses grupos. Para os juristas, essa distinção fere a isonomia, já que o risco de um acidente impactar a vida laboral é igual para todos os trabalhadores.</p>
 
-<h2>8. Conclusão: Cidadania e Vigilância</h2>
-<p>É vital compreender dois marcos temporais importantes: o auxílio-acidente é pago até a véspera da aposentadoria. Desde 1997 (Lei 9.528), é proibido acumular os dois valores, exceto para acidentes ocorridos antes daquela data, em respeito ao direito adquirido. Portanto, o benefício funciona como uma ponte financeira até o momento da sua jubilação.</p>
-<p>O auxílio-acidente não é uma caridade, mas um direito garantido pela sua qualidade de segurado. Para buscá-lo, o passo inicial é organizar seu Prontuário Médico de Evolução — o documento que detalha todo o histórico do seu tratamento e a consolidação da lesão. Revise seus laudos e históricos de acidentes passados; a justiça social começa com a sua vigilância.</p>
-<p><strong>Se a lei reconhece que seu esforço agora é maior para realizar as mesmas tarefas, por que você ainda não buscou a compensação que é sua por direito?</strong></p>`,
+<h2 style="margin-top: 24px; margin-bottom: 12px;"><strong>8. Conclusão: Cidadania e Vigilância</strong></h2>
+<p style="margin-bottom: 16px;">É vital compreender dois marcos temporais importantes: o auxílio-acidente é pago até a véspera da aposentadoria. Desde 1997 (Lei 9.528), é proibido acumular os dois valores, exceto para acidentes ocorridos antes daquela data, em respeito ao direito adquirido. Portanto, o benefício funciona como uma ponte financeira até o momento da sua jubilação.</p>
+<p style="margin-bottom: 16px;">O auxílio-acidente não é uma caridade, mas um direito garantido pela sua qualidade de segurado. Para buscá-lo, o passo inicial é organizar seu Prontuário Médico de Evolução — o documento que detalha todo o histórico do seu tratamento e a consolidação da lesão. Revise seus laudos e históricos de acidentes passados; a justiça social começa com a sua vigilância.</p>
+<p style="margin-bottom: 16px;"><strong>Se a lei reconhece que seu esforço agora é maior para realizar as mesmas tarefas, por que você ainda não buscou a compensação que é sua por direito?</strong></p>`,
   },
   "doenca-ocupacional-inss": {
     id: "doenca-ocupacional-inss",
@@ -127,28 +127,28 @@ const articles: Record<string, Article> = {
     readTime: "7 min",
     image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/justice-abstract-WjvXPx29Lxi3PJtChZXf4V.webp",
     content: `
-      <h2>O que é Doença Ocupacional?</h2>
-      <p>Doença ocupacional é aquela que resulta da exposição a agentes nocivos durante o exercício da atividade profissional. Diferente do acidente de trabalho, a doença ocupacional desenvolve-se gradualmente.</p>
+      <h2 style="margin-top: 24px; margin-bottom: 12px;"><strong>O que é Doença Ocupacional?</strong></h2>
+      <p style="margin-bottom: 16px;">Doença ocupacional é aquela que resulta da exposição a agentes nocivos durante o exercício da atividade profissional. Diferente do acidente de trabalho, a doença ocupacional desenvolve-se gradualmente.</p>
 
-      <h2>Como Comprovar</h2>
-      <p>Para comprovar uma doença ocupacional, você precisa de:</p>
-      <ul>
-        <li>Diagnóstico médico comprovado</li>
-        <li>Histórico de exposição aos agentes nocivos</li>
-        <li>Documentação do ambiente de trabalho</li>
-        <li>Perícia técnica quando necessário</li>
+      <h2 style="margin-top: 24px; margin-bottom: 12px;"><strong>Como Comprovar</strong></h2>
+      <p style="margin-bottom: 16px;">Para comprovar uma doença ocupacional, você precisa de:</p>
+      <ul style="margin-top: 12px; margin-bottom: 16px; padding-left: 24px;">
+        <li style="margin-bottom: 8px;">Diagnóstico médico comprovado</li>
+        <li style="margin-bottom: 8px;">Histórico de exposição aos agentes nocivos</li>
+        <li style="margin-bottom: 8px;">Documentação do ambiente de trabalho</li>
+        <li style="margin-bottom: 8px;">Perícia técnica quando necessário</li>
       </ul>
 
-      <h2>Benefícios Disponíveis</h2>
-      <ul>
-        <li>Auxílio-doença</li>
-        <li>Aposentadoria por invalidez</li>
-        <li>Auxílio-acidente</li>
-        <li>Indenização por danos morais e materiais</li>
+      <h2 style="margin-top: 24px; margin-bottom: 12px;"><strong>Benefícios Disponíveis</strong></h2>
+      <ul style="margin-top: 12px; margin-bottom: 16px; padding-left: 24px;">
+        <li style="margin-bottom: 8px;">Auxílio-doença</li>
+        <li style="margin-bottom: 8px;">Aposentadoria por invalidez</li>
+        <li style="margin-bottom: 8px;">Auxílio-acidente</li>
+        <li style="margin-bottom: 8px;">Indenização por danos morais e materiais</li>
       </ul>
 
-      <h2>Conclusão</h2>
-      <p>Se você desenvolveu uma doença ocupacional, você tem direitos que precisam ser protegidos. Consulte um especialista para garantir que você receba todos os benefícios que merece.</p>
+      <h2 style="margin-top: 24px; margin-bottom: 12px;"><strong>Conclusão</strong></h2>
+      <p style="margin-bottom: 16px;">Se você desenvolveu uma doença ocupacional, você tem direitos que precisam ser protegidos. Consulte um especialista para garantir que você receba todos os benefícios que merece.</p>
     `,
   },
   "revisao-aposentadoria": {
@@ -161,18 +161,18 @@ const articles: Record<string, Article> = {
     readTime: "8 min",
     image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/blog-revisao-aposentadoria-real-NafmZBkv3r5ZM8udNSBRmA.webp",
     content: `
-      <h2>O que é Revisão da Aposentadoria?</h2>
-      <p>A revisão da aposentadoria é um processo legal que permite ao aposentado requerer o recálculo do seu benefício, visando aumentar o valor mensal recebido.</p>
+      <h2 style="margin-top: 24px; margin-bottom: 12px;"><strong>O que é Revisão da Aposentadoria?</strong></h2>
+      <p style="margin-bottom: 16px;">A revisão da aposentadoria é um processo legal que permite ao aposentado requerer o recálculo do seu benefício, visando aumentar o valor mensal recebido.</p>
 
-      <h2>Tipos de Revisão</h2>
-      <ul>
-        <li>Revisão da Vida Toda</li>
-        <li>Revisão por Erro Administrativo</li>
-        <li>Revisão por Mudança de Legislação</li>
+      <h2 style="margin-top: 24px; margin-bottom: 12px;"><strong>Tipos de Revisão</strong></h2>
+      <ul style="margin-top: 12px; margin-bottom: 16px; padding-left: 24px;">
+        <li style="margin-bottom: 8px;">Revisão da Vida Toda</li>
+        <li style="margin-bottom: 8px;">Revisão por Erro Administrativo</li>
+        <li style="margin-bottom: 8px;">Revisão por Mudança de Legislação</li>
       </ul>
 
-      <h2>Conclusão</h2>
-      <p>Se você já é aposentado, pode ter direito a uma revisão que aumente seu benefício. Consulte-nos para uma análise gratuita.</p>
+      <h2 style="margin-top: 24px; margin-bottom: 12px;"><strong>Conclusão</strong></h2>
+      <p style="margin-bottom: 16px;">Se você já é aposentado, pode ter direito a uma revisão que aumente seu benefício. Consulte-nos para uma análise gratuita.</p>
     `,
   },
   "direitos-trabalhador-demissao": {
@@ -185,11 +185,11 @@ const articles: Record<string, Article> = {
     readTime: "6 min",
     image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/blog-direitos-trabalhador-real-PaTqye6ewSuR9j7iRuoFVF.webp",
     content: `
-      <h2>Direitos na Demissão</h2>
-      <p>Quando você é demitido, tem direitos que precisam ser respeitados. Conheça todos eles.</p>
+      <h2 style="margin-top: 24px; margin-bottom: 12px;"><strong>Direitos na Demissão</strong></h2>
+      <p style="margin-bottom: 16px;">Quando você é demitido, tem direitos que precisam ser respeitados. Conheça todos eles.</p>
 
-      <h2>Conclusão</h2>
-      <p>Se você foi demitido injustamente, você tem direitos. Entre em contato conosco para protegê-los.</p>
+      <h2 style="margin-top: 24px; margin-bottom: 12px;"><strong>Conclusão</strong></h2>
+      <p style="margin-bottom: 16px;">Se você foi demitido injustamente, você tem direitos. Entre em contato conosco para protegê-los.</p>
     `,
   },
   "planejamento-previdenciario-beneficios": {
@@ -202,11 +202,11 @@ const articles: Record<string, Article> = {
     readTime: "5 min",
     image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/blog-beneficios-planejamento-real-GRfW7KEPToKkcUWrYbDtrY.webp",
     content: `
-      <h2>Os 5 Benefícios do Planejamento Previdenciário</h2>
-      <p>Descubra como um planejamento adequado pode transformar sua aposentadoria.</p>
+      <h2 style="margin-top: 24px; margin-bottom: 12px;"><strong>Os 5 Benefícios do Planejamento Previdenciário</strong></h2>
+      <p style="margin-bottom: 16px;">Descubra como um planejamento adequado pode transformar sua aposentadoria.</p>
 
-      <h2>Conclusão</h2>
-      <p>Não deixe sua aposentadoria ao acaso. Planeje agora e colha os benefícios no futuro.</p>
+      <h2 style="margin-top: 24px; margin-bottom: 12px;"><strong>Conclusão</strong></h2>
+      <p style="margin-bottom: 16px;">Não deixe sua aposentadoria ao acaso. Planeje agora e colha os benefícios no futuro.</p>
     `,
   },
 };
