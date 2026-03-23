@@ -156,12 +156,10 @@ export default function Blog() {
                   </div>
 
                   {/* CTA */}
-                  <Link href={`/blog/${post.id}`}>
-                    <a className="inline-flex items-center gap-2 text-navy font-semibold text-sm hover:text-gold transition-colors group/link">
-                      Ler Artigo
-                      <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
-                    </a>
-                  </Link>
+                  <a href={`/blog/${post.id}`} className="inline-flex items-center gap-2 text-navy font-semibold text-sm hover:text-gold transition-colors group/link">
+                    Ler Artigo
+                    <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
+                  </a>
                 </div>
               </motion.article>
             ))}
