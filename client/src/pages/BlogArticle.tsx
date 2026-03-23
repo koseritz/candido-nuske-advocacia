@@ -216,16 +216,12 @@ export default function BlogArticle() {
 
   if (!article) {
     return (
-      <div className="min-h-screen bg-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="font-serif text-3xl text-navy mb-4">Artigo não encontrado</h1>
-          <Link href="/blog">
-            <a className="inline-flex items-center gap-2 text-navy hover:text-gold transition-colors">
-              <ArrowLeft className="w-4 h-4" />
-              Voltar para o Blog
-            </a>
-          </Link>
-        </div>
+      <div className="min-h-screen flex flex-col items-center justify-center">
+        <h1 className="font-serif text-3xl text-navy mb-4">Artigo não encontrado</h1>
+        <a href="/blog" className="inline-flex items-center gap-2 text-navy hover:text-gold transition-colors">
+          <ArrowLeft className="w-4 h-4" />
+          Voltar para o Blog
+        </a>
       </div>
     );
   }
@@ -237,12 +233,10 @@ export default function BlogArticle() {
       {/* Hero */}
       <section className="bg-gradient-to-b from-navy to-navy/90 text-white pt-12 lg:pt-16 pb-8 lg:pb-12">
         <div className="container">
-          <Link href="/blog">
-            <a className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors mb-6">
-              <ArrowLeft className="w-4 h-4" />
-              Voltar para o Blog
-            </a>
-          </Link>
+          <a href="/blog" className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors mb-6">
+            <ArrowLeft className="w-4 h-4" />
+            Voltar para o Blog
+          </a>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
