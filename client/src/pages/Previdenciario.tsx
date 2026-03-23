@@ -559,6 +559,7 @@ export default function Previdenciario() {
                   src={HERO_IMG}
                   alt="Dr. Cândido Nüske"
                   className="w-full aspect-[3/4] object-contain object-bottom"
+                  style={{marginTop: '7px', marginRight: '18px', marginBottom: '-14px', marginLeft: '1px', width: '310px', height: '384px'}}
                 />
               </motion.div>
 
@@ -572,16 +573,13 @@ export default function Previdenciario() {
                   O especialista
                 </p>
                 <h2 className="font-serif text-3xl lg:text-4xl text-white mb-1 leading-tight">
-                  Cândido Nüske
+                  Dr. Cândido Nüske
                 </h2>
                 <p className="text-gold text-sm mb-6 leading-relaxed">
-                  Advogado &middot; Especialista em Planejamento Previdenciário
-                  &middot; Especialista em Direito Tributário
+                  Advogado &middot; Especialista em Planejamento Previdenciário &middot; Especialista em Direito Tributário - 18 Anos de experiência!
                 </p>
                 <p className="text-white/60 text-sm leading-relaxed mb-4">
-                  Atua há mais de uma década no direito previdenciário, com foco
-                  em planejamento personalizado para autônomos, servidores
-                  públicos e trabalhadores CLT em todo o Brasil.
+                  Atua a mais de 18 anos no direito previdenciário, com foco em planejamento previdenciário personalizado para autônomos, servidores públicos e trabalhadores CLT em todo o Brasil.
                 </p>
                 <p className="text-white/60 text-sm leading-relaxed mb-7">
                   Cada análise é elaborada individualmente, considerando a
