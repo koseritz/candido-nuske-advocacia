@@ -42,7 +42,7 @@ export default function Header() {
           <img
             src={LOGO_URL}
             alt="Cândido Nüske Advocacia"
-            className="h-10 lg:h-12 w-auto"
+            className="h-10 lg:h-12 w-auto" style={{paddingLeft: '18px', marginTop: '7px', marginRight: '16px', marginBottom: '1px', marginLeft: '2px', width: '192px', height: '64px'}}
           />
         </a>
 

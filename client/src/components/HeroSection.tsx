@@ -20,7 +20,7 @@ export default function HeroSection() {
             transition={{ duration: 0.7, ease: "easeOut" }}
             className="order-2 lg:order-1"
           >
-            <h1 className="font-serif text-3xl sm:text-4xl lg:text-[2.75rem] xl:text-5xl leading-tight text-navy mb-6">
+            <h1 className="font-serif text-3xl sm:text-4xl lg:text-[2.75rem] xl:text-5xl leading-tight text-navy mb-6" style={{paddingTop: '35px'}}>
               Advogados especialistas em aposentadorias e direitos do trabalhador, dedicados a garantir a proteção e os benefícios que você merece.
             </h1>
 
