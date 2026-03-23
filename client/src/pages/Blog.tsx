@@ -27,7 +27,7 @@ const blogPosts: BlogPost[] = [
     author: "Dr. Cândido Nüske",
     category: "Previdenciário",
     readTime: "5 min",
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/blog-aposentadoria-antecipada-fqCGwVokcAQUqDSsqzbqmf.webp",
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/blog-aposentadoria-antecipada-real-7UWURce28Sdibe2mG2Fv8h.webp",
   },
   {
     id: "auxilio-acidente-direitos",
@@ -37,7 +37,7 @@ const blogPosts: BlogPost[] = [
     author: "Dr. Cândido Nüske",
     category: "Previdenciário",
     readTime: "6 min",
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/blog-auxilio-acidente-28kP5iqR68FghUCPKj5tB9.webp",
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/blog-auxilio-acidente-real-3PSaWH6MSa3BxmdWyq9djJ.webp",
   },
   {
     id: "doenca-ocupacional-inss",
@@ -47,7 +47,7 @@ const blogPosts: BlogPost[] = [
     author: "Dr. Cândido Nüske",
     category: "Trabalhista",
     readTime: "7 min",
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/blog-doenca-ocupacional-SaijCoLkLaTtiAaUPBf4Sw.webp",
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/blog-doenca-ocupacional-real-4jVcyNrfAKzG2syRKKNj69.webp",
   },
   {
     id: "revisao-aposentadoria",
@@ -57,7 +57,7 @@ const blogPosts: BlogPost[] = [
     author: "Dr. Cândido Nüske",
     category: "Previdenciário",
     readTime: "8 min",
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/blog-revisao-aposentadoria-4EcHKesbLApR45zArmCRsM.webp",
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/blog-revisao-aposentadoria-real-NafmZBkv3r5ZM8udNSBRmA.webp",
   },
   {
     id: "direitos-trabalhador-demissao",
@@ -67,7 +67,7 @@ const blogPosts: BlogPost[] = [
     author: "Dr. Cândido Nüske",
     category: "Trabalhista",
     readTime: "6 min",
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/blog-direitos-trabalhador-e9GNQKNPThVfqcby9zaURu.webp",
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/blog-direitos-trabalhador-real-PaTqye6ewSuR9j7iRuoFVF.webp",
   },
   {
     id: "planejamento-previdenciario-beneficios",
@@ -77,7 +77,7 @@ const blogPosts: BlogPost[] = [
     author: "Dr. Cândido Nüske",
     category: "Previdenciário",
     readTime: "5 min",
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/blog-beneficios-planejamento-JcUgHTBXgKFyk7YLZU7JHT.webp",
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/blog-beneficios-planejamento-real-GRfW7KEPToKkcUWrYbDtrY.webp",
   },
 ];
 
