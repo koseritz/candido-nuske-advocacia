@@ -5,6 +5,8 @@
 import { motion } from "framer-motion";
 import { Calendar, User, ArrowLeft } from "lucide-react";
 import { Link, useParams } from "wouter";
+import BlogBreadcrumb from "@/components/BlogBreadcrumb";
+import BlogFooter from "@/components/BlogFooter";
 
 interface Article {
   id: string;
@@ -231,9 +233,11 @@ export default function BlogArticle() {
   const currentUrl = typeof window !== 'undefined' ? window.location.href : '';
 
   return (
-    <div className="min-h-screen bg-white">
-      {/* Hero */}
-      <section className="bg-gradient-to-b from-navy to-navy/90 text-white pt-12 lg:pt-16 pb-8 lg:pb-12">
+    <div className="min-h-screen bg-white flex flex-col">
+      {/* Breadcrumb */}
+      <BlogBreadcrumb items={[{ label: article.title }]} />
+
+      {/* Back Button */}      <section className="bg-gradient-to-b from-navy to-navy/90 text-white pt-12 lg:pt-16 pb-8 lg:pb-12">
         <div className="container">
           <a href="/blog" className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors mb-6">
             <ArrowLeft className="w-4 h-4" />
@@ -374,6 +378,9 @@ export default function BlogArticle() {
           </motion.div>
         </div>
       </section>
+
+      {/* Blog Footer */}
+      <BlogFooter />
     </div>
   );
 }

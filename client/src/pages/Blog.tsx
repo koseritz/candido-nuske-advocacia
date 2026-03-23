@@ -5,6 +5,8 @@
 import { motion } from "framer-motion";
 import { Calendar, User, ArrowRight } from "lucide-react";
 import { Link } from "wouter";
+import BlogBreadcrumb from "@/components/BlogBreadcrumb";
+import BlogFooter from "@/components/BlogFooter";
 
 interface BlogPost {
   id: string;
@@ -83,7 +85,10 @@ const blogPosts: BlogPost[] = [
 
 export default function Blog() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white flex flex-col">
+      {/* Breadcrumb */}
+      <BlogBreadcrumb items={[]} />
+
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-navy to-navy/90 text-white pt-16 lg:pt-24 pb-12 lg:pb-16">
         <div className="container">
@@ -198,6 +203,9 @@ export default function Blog() {
           </motion.div>
         </div>
       </section>
+
+      {/* Blog Footer */}
+      <BlogFooter />
     </div>
   );
 }
