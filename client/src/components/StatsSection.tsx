@@ -44,7 +44,7 @@ function AnimatedCounter({ value, prefix = "", suffix = "" }: { value: number; p
   }, [value]);
 
   return (
-    <div ref={ref} className="font-serif text-4xl lg:text-5xl font-bold text-navy">
+    <div ref={ref} className="font-serif text-2xl lg:text-4xl font-bold text-navy">
       {prefix}{count.toLocaleString("pt-BR")}{suffix}
     </div>
   );
@@ -57,10 +57,10 @@ function StatItem({ value, prefix, suffix, label }: StatItemProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.5 }}
-      className="text-center"
+      className="text-center py-2 lg:py-3"
     >
       <AnimatedCounter value={value} prefix={prefix} suffix={suffix} />
-      <p className="text-muted-foreground text-sm mt-2 max-w-[180px] mx-auto leading-relaxed">
+      <p className="text-muted-foreground text-xs lg:text-sm mt-1 lg:mt-2 max-w-[150px] mx-auto leading-tight">
         {label}
       </p>
     </motion.div>
@@ -69,9 +69,9 @@ function StatItem({ value, prefix, suffix, label }: StatItemProps) {
 
 export default function StatsSection() {
   return (
-    <section id="areas" className="bg-ice py-16 lg:py-20">
+    <section id="areas" className="bg-ice py-8 lg:py-12">
       <div className="container">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8">
           <StatItem value={3000} prefix="+" label="clientes atendidos" />
           <StatItem value={3500} prefix="+" label="casos de sucesso" />
           <StatItem value={27} label="estados atendidos" />

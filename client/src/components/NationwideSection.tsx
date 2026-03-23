@@ -33,9 +33,9 @@ const features = [
 
 export default function NationwideSection() {
   return (
-    <section className="py-20 lg:py-28 bg-white overflow-hidden">
+    <section className="py-8 lg:py-16 bg-white overflow-hidden">
       <div className="container">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
           {/* Image */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -48,21 +48,21 @@ export default function NationwideSection() {
               <img
                 src={OFFICE_IMG}
                 alt="Escritório moderno"
-                className="w-full h-[320px] lg:h-[420px] object-cover"
+                className="w-full h-auto max-h-[40vh] object-cover"
               />
             </div>
             {/* Floating card */}
-            <div className="absolute -bottom-6 -right-4 lg:right-8 bg-white rounded-xl shadow-lg p-4 lg:p-5 max-w-[220px]">
-              <div className="flex items-center gap-3 mb-2">
-                <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
-                  <Globe className="w-5 h-5 text-green-600" />
+            <div className="absolute -bottom-4 -right-2 lg:right-6 bg-white rounded-lg shadow-lg p-3 lg:p-4 max-w-[200px]">
+              <div className="flex items-center gap-2 mb-1">
+                <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center">
+                  <Globe className="w-4 h-4 text-green-600" />
                 </div>
                 <div>
-                  <p className="font-bold text-navy text-lg">27</p>
+                  <p className="font-bold text-navy text-base">27</p>
                   <p className="text-xs text-muted-foreground">Estados + DF</p>
                 </div>
               </div>
-              <p className="text-xs text-muted-foreground">Cobertura nacional completa</p>
+              <p className="text-xs text-muted-foreground">Cobertura nacional</p>
             </div>
           </motion.div>
 
@@ -73,17 +73,17 @@ export default function NationwideSection() {
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-sm font-semibold text-gold uppercase tracking-widest mb-3">
+            <p className="text-xs lg:text-sm font-semibold text-gold uppercase tracking-widest mb-2">
               Atendimento Digital
             </p>
-            <h2 className="font-serif text-3xl lg:text-4xl text-navy mb-4 leading-tight">
+            <h2 className="font-serif text-2xl lg:text-3xl text-navy mb-3 lg:mb-4 leading-tight">
               A distância NÃO é um obstáculo!
             </h2>
-            <p className="text-muted-foreground text-base lg:text-lg leading-relaxed mb-8">
+            <p className="text-muted-foreground text-sm lg:text-base leading-relaxed mb-4 lg:mb-6">
               Independentemente da sua localização, estamos prontos para atender você. Com apenas um clique, você pode falar conosco e contar com nosso suporte jurídico especializado.
             </p>
 
-            <div className="grid sm:grid-cols-2 gap-5">
+            <div className="grid sm:grid-cols-2 gap-3 lg:gap-4">
               {features.map((feature, index) => (
                 <motion.div
                   key={feature.title}
@@ -91,13 +91,13 @@ export default function NationwideSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="flex gap-3"
+                  className="flex gap-2"
                 >
-                  <div className="w-9 h-9 rounded-lg bg-ice flex-shrink-0 flex items-center justify-center">
-                    <feature.icon className="w-4.5 h-4.5 text-navy" />
+                  <div className="w-8 h-8 rounded-lg bg-ice flex-shrink-0 flex items-center justify-center">
+                    <feature.icon className="w-4 h-4 text-navy" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-navy text-sm mb-1">{feature.title}</h4>
+                    <h4 className="font-semibold text-navy text-xs lg:text-sm mb-1">{feature.title}</h4>
                     <p className="text-muted-foreground text-xs leading-relaxed">{feature.description}</p>
                   </div>
                 </motion.div>

@@ -10,7 +10,7 @@ const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvK
 
 export default function HeroSection() {
   return (
-    <section className="relative bg-white pt-24 lg:pt-28 pb-12 lg:pb-0 overflow-hidden">
+    <section className="relative bg-white pt-8 lg:pt-12 pb-8 lg:pb-12 overflow-hidden">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Text Content */}
@@ -28,7 +28,7 @@ export default function HeroSection() {
               Contamos com um time de especialistas dedicados em áreas específicas, com supervisão e atuação direta do Dr. Cândido Nüske.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 mb-10">
+            <div className="flex flex-col sm:flex-row gap-4 mb-4 lg:mb-6">
               <a
                 href="https://wa.me/5551992851828"
                 target="_blank"
@@ -41,7 +41,7 @@ export default function HeroSection() {
             </div>
 
             {/* Trust Badges */}
-            <div className="flex flex-wrap items-center gap-3 mt-6">
+            <div className="flex flex-wrap items-center gap-3 mt-3 lg:mt-4">
               {/* Google Reviews */}
               <div className="flex items-center gap-3 bg-ice rounded-xl px-3 py-2">
                 <div>
@@ -87,12 +87,10 @@ export default function HeroSection() {
               <img
                 src={HERO_IMG}
                 alt="Dr. Cândido Nüske - Advogado"
-                className="w-full h-[400px] lg:h-[560px] object-contain object-bottom lg:pb-[321px]" style={{marginTop: '2px', width: '583px', height: '780px'}}
+                className="w-full h-auto max-h-[50vh] lg:max-h-[70vh] object-contain object-bottom lg:pb-[321px]" style={{marginTop: '2px'}}
               />
             </div>
-            {/* Decorative element */}
-            <div className="hidden lg:block absolute -bottom-4 -left-4 w-24 h-24 bg-gold/10 rounded-2xl -z-10" />
-            <div className="hidden lg:block absolute -top-4 -right-4 w-16 h-16 bg-navy/5 rounded-xl -z-10" />
+
           </motion.div>
         </div>
       </div>

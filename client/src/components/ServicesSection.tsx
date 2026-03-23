@@ -45,10 +45,10 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section id="servicos" className="py-20 lg:py-28 bg-white">
+    <section id="servicos" className="py-8 lg:py-16 bg-white">
       {/* Banner */}
-      <div className="relative mb-16 lg:mb-20">
-        <div className="relative h-[280px] lg:h-[340px] overflow-hidden">
+      <div className="relative mb-8 lg:mb-12">
+        <div className="relative h-[200px] lg:h-[280px] overflow-hidden">
           <img
             src={JUSTICE_IMG}
             alt="Advocacia digital transformando vidas"
@@ -62,7 +62,7 @@ export default function ServicesSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="font-serif text-3xl lg:text-4xl xl:text-5xl text-white mb-4 leading-tight"
+                className="font-serif text-2xl lg:text-3xl text-white mb-2 lg:mb-3 leading-tight"
               >
                 Advocacia de excelência<br />transformando vidas.
               </motion.h2>
@@ -71,7 +71,7 @@ export default function ServicesSection() {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-white/80 text-base lg:text-lg max-w-2xl mx-auto"
+                className="text-white/80 text-xs lg:text-sm max-w-2xl mx-auto"
               >
                 Oferecemos serviços jurídicos especializados para proteger direitos trabalhistas, previdenciários, bancários e tributários.
               </motion.p>
@@ -82,7 +82,7 @@ export default function ServicesSection() {
 
       {/* Services Grid */}
       <div className="container">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-4">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
@@ -90,32 +90,32 @@ export default function ServicesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.4, delay: index * 0.08 }}
-              className="group bg-white border border-border rounded-2xl p-6 lg:p-7 hover:shadow-xl hover:shadow-navy/5 transition-all duration-300 relative overflow-hidden"
+              className="group bg-white border border-border rounded-xl p-4 lg:p-5 hover:shadow-xl hover:shadow-navy/5 transition-all duration-300 relative overflow-hidden"
             >
               {/* Top border accent */}
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-navy to-petrol opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-              <div className="w-11 h-11 rounded-lg bg-ice flex items-center justify-center mb-4 group-hover:bg-navy/10 transition-colors">
-                <service.icon className="w-5 h-5 text-navy" />
+              <div className="w-9 h-9 rounded-lg bg-ice flex items-center justify-center mb-2 lg:mb-3 group-hover:bg-navy/10 transition-colors">
+                <service.icon className="w-4 h-4 text-navy" />
               </div>
-              <h3 className="font-semibold text-navy text-lg mb-3">{service.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed mb-5">
+              <h3 className="font-semibold text-navy text-base lg:text-lg mb-2">{service.title}</h3>
+              <p className="text-muted-foreground text-xs lg:text-sm leading-relaxed mb-3 lg:mb-4">
                 {service.description}
               </p>
               {(service as any).link ? (
                 <Link
                   href={(service as any).link}
-                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-navy text-white text-sm font-medium rounded-full hover:bg-navy-light transition-colors"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-navy text-white text-xs lg:text-sm font-medium rounded-full hover:bg-navy-light transition-colors"
                 >
                   Saber mais
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-3 h-3 lg:w-4 lg:h-4" />
                 </Link>
               ) : (
                 <a
                   href="https://wa.me/5551992851828"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-navy text-white text-sm font-medium rounded-full hover:bg-navy-light transition-colors"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-navy text-white text-xs lg:text-sm font-medium rounded-full hover:bg-navy-light transition-colors"
                 >
                   Saber mais
                 </a>
