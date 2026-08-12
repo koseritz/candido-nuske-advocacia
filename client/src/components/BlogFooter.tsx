@@ -1,116 +1,41 @@
 /**
- * BlogFooter Component
- * Design: Advocacia Digital Contemporânea
- * Footer com informações do escritório para as páginas do blog
+ * Design: autoridade serena — footer editorial compartilhado por blog e artigos.
  */
-
-import { MapPin, Phone, Mail, Clock, Instagram, Linkedin, Facebook, MessageCircle } from "lucide-react";
-import { Link } from "wouter";
+import { ArrowUpRight, Instagram, Mail, MapPin, Phone } from "lucide-react";
 
 export default function BlogFooter() {
   return (
-    <footer className="bg-navy text-white py-12 lg:py-16 mt-16">
-      <div className="container max-w-6xl mx-auto">
-        {/* Main Content */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          {/* Escritório Porto Alegre */}
+    <footer className="bg-navy text-white">
+      <div className="container py-12 sm:py-14 lg:py-16">
+        <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr_0.8fr]">
           <div>
-            <h3 className="font-serif text-lg font-bold mb-4 text-gold">Escritório Porto Alegre</h3>
-            <div className="space-y-3 text-sm">
-              <div className="flex gap-3">
-                <MapPin className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
-                <p>Endereço do escritório em Porto Alegre, RS</p>
-              </div>
-              <div className="flex gap-3">
-                <Phone className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
-                <a href="tel:+555133334444" className="hover:text-gold transition-colors">
-                  (51) 3333-4444
-                </a>
-              </div>
-              <div className="flex gap-3">
-                <Mail className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
-                <a href="mailto:contato@candidonuske.adv.br" className="hover:text-gold transition-colors">
-                  contato@candidonuske.adv.br
-                </a>
-              </div>
-              <div className="flex gap-3">
-                <Clock className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
-                <p>Seg-Sex: 09:00 - 18:00</p>
-              </div>
-            </div>
+            <p className="font-serif text-3xl">Cândido Nüske</p>
+            <p className="mt-3 max-w-sm text-sm leading-6 text-white/55">Conteúdo jurídico sobre planejamento previdenciário, aposentadoria, auxílio-acidente e direitos do trabalhador.</p>
+            <a href="https://instagram.com/candidonuske.previdenciario" target="_blank" rel="noopener noreferrer" className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-gold hover:text-gold-light"><Instagram className="h-4 w-4" /> @candidonuske.previdenciario</a>
           </div>
 
-          {/* Escritório São Paulo */}
           <div>
-            <h3 className="font-serif text-lg font-bold mb-4 text-gold">Escritório São Paulo</h3>
-            <div className="space-y-3 text-sm">
-              <div className="flex gap-3">
-                <MapPin className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
-                <p>Endereço do escritório em São Paulo, SP</p>
-              </div>
-              <div className="flex gap-3">
-                <Phone className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
-                <a href="tel:+551196383640" className="hover:text-gold transition-colors">
-                  (11) 9638-3640
-                </a>
-              </div>
-              <div className="flex gap-3">
-                <Mail className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
-                <a href="mailto:sp@candidonuske.adv.br" className="hover:text-gold transition-colors">
-                  sp@candidonuske.adv.br
-                </a>
-              </div>
-              <div className="flex gap-3">
-                <Clock className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
-                <p>Seg-Sex: 09:00 - 18:00</p>
-              </div>
-            </div>
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-gold">Continue navegando</p>
+            <nav className="mt-4 flex flex-col gap-3 text-sm text-white/65">
+              <a href="/" className="hover:text-gold">← Página inicial</a>
+              <a href="/blog" className="hover:text-gold">Todos os artigos</a>
+              <a href="/previdenciario" className="hover:text-gold">Planejamento previdenciário</a>
+              <a href="/#contato" className="hover:text-gold">Contato do escritório</a>
+            </nav>
           </div>
 
-          {/* Links Rápidos */}
           <div>
-            <h3 className="font-serif text-lg font-bold mb-4 text-gold">Links Rápidos</h3>
-            <div className="space-y-2 text-sm">
-              <Link href="/" className="block hover:text-gold transition-colors">
-                ← Voltar para Início
-              </Link>
-              <Link href="/blog" className="block hover:text-gold transition-colors">
-                ← Todos os Artigos
-              </Link>
-              <Link href="/#contact" className="block hover:text-gold transition-colors">
-                Contato
-              </Link>
-              <a href="https://wa.me/5551999999999" target="_blank" rel="noopener noreferrer" className="block hover:text-gold transition-colors flex items-center gap-2">
-                <MessageCircle className="w-4 h-4" />
-                WhatsApp
-              </a>
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-gold">Fale com o escritório</p>
+            <div className="mt-4 flex flex-col gap-3 text-sm text-white/65">
+              <a href="mailto:contato@candidonuske.adv.br" className="flex items-start gap-2 hover:text-gold"><Mail className="mt-0.5 h-4 w-4 shrink-0 text-gold" /> contato@candidonuske.adv.br</a>
+              <a href="tel:+5551992851828" className="flex items-start gap-2 hover:text-gold"><Phone className="mt-0.5 h-4 w-4 shrink-0 text-gold" /> (51) 99285-1828</a>
+              <span className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold" /> Porto Alegre · São Paulo · online</span>
             </div>
           </div>
         </div>
-
-        {/* Divider */}
-        <div className="border-t border-white/20 py-8"></div>
-
-        {/* Bottom Section */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-          {/* Social Links */}
-          <div className="flex gap-4">
-            <a href="https://instagram.com/candidonuske.previdenciario" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gold transition-colors" title="Instagram">
-              <Instagram className="w-5 h-5" />
-            </a>
-            <a href="https://linkedin.com/in/candidonuske" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gold transition-colors" title="LinkedIn">
-              <Linkedin className="w-5 h-5" />
-            </a>
-            <a href="https://facebook.com/candidonuske" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gold transition-colors" title="Facebook">
-              <Facebook className="w-5 h-5" />
-            </a>
-          </div>
-
-          {/* Copyright */}
-          <div className="text-sm text-gray-400 text-center md:text-right">
-            <p>&copy; 2026 Cândido Nüske Advocacia. Todos os direitos reservados.</p>
-            <p className="text-xs mt-1">OAB/RS 7.089 | Especialista em Direito Previdenciário</p>
-          </div>
+        <div className="mt-10 flex flex-col gap-3 border-t border-white/10 pt-5 text-xs text-white/40 sm:flex-row sm:items-center sm:justify-between">
+          <p>© 2026 Cândido Nüske Advocacia. OAB/RS 7.089.</p>
+          <a href="/" className="inline-flex items-center gap-1 hover:text-gold">Voltar ao escritório <ArrowUpRight className="h-3 w-3" /></a>
         </div>
       </div>
     </footer>

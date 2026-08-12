@@ -213,3 +213,70 @@ html {
     padding-left: 20px;
   }
 }
+
+
+/* Padrão editorial revisado: artigos legíveis, títulos sempre destacados e ritmo consistente. */
+.blog-article {
+  overflow-wrap: anywhere;
+}
+
+.blog-article h2,
+.blog-article h3 {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-weight: 700 !important;
+  color: var(--color-navy);
+}
+
+.blog-article h2 {
+  margin-top: 2rem !important;
+  margin-bottom: 0.8rem !important;
+  font-size: clamp(1.45rem, 2.2vw, 2rem) !important;
+  line-height: 1.2 !important;
+}
+
+.blog-article h3 {
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.65rem !important;
+  font-size: clamp(1.18rem, 1.8vw, 1.5rem) !important;
+  line-height: 1.25 !important;
+}
+
+.blog-article p {
+  margin-top: 0 !important;
+  margin-bottom: 1rem !important;
+  color: color-mix(in oklab, var(--color-navy) 68%, transparent) !important;
+  font-size: 1rem !important;
+  line-height: 1.75 !important;
+}
+
+.blog-article ul,
+.blog-article ol {
+  margin-top: 0.7rem !important;
+  margin-bottom: 1.15rem !important;
+  padding-left: 1.4rem !important;
+}
+
+.blog-article li {
+  margin-bottom: 0.5rem !important;
+  color: color-mix(in oklab, var(--color-navy) 68%, transparent);
+  line-height: 1.7;
+}
+
+.blog-article blockquote {
+  margin: 1.5rem 0 !important;
+  border-left: 3px solid var(--color-gold);
+  border-radius: 0 0.75rem 0.75rem 0;
+  background: #f3eee3;
+  color: var(--color-navy);
+}
+
+.blog-article strong {
+  font-weight: 700 !important;
+  color: var(--color-navy);
+}
+
+@media (max-width: 640px) {
+  .blog-article h2 { margin-top: 1.5rem !important; }
+  .blog-article h3 { margin-top: 1.2rem !important; }
+  .blog-article p { font-size: 0.95rem !important; line-height: 1.7 !important; }
+}

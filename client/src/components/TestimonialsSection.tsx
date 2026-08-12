@@ -1,110 +1,61 @@
-/*
- * Design: Advocacia Digital Contemporânea
- * Seção de depoimentos com cards em carrossel/grid
- * Fundo ice com cards brancos
+/**
+ * Design: autoridade serena — prova de processo em vez de depoimentos não verificáveis.
+ * Não são exibidas avaliações ou testemunhos sem fonte e autorização.
  */
-import { motion } from "framer-motion";
-import { Star, Quote } from "lucide-react";
+import { ArrowUpRight, ClipboardCheck, MessageSquareText, Route } from "lucide-react";
 
-const testimonials = [
+const experience = [
   {
-    name: "Gregori C. G.",
-    text: "Encontrei o escritório do Dr. Cândido no Google e fiz contato, foi um ótimo profissional e uma pessoa maravilhosa! Sempre me ajudou e sempre prestativo. Se eu fosse dar uma nota a ele, 10 seria pouco pela prestação que ele fez por mim e pela minha causa!",
-    rating: 5,
+    icon: MessageSquareText,
+    title: "Você é ouvido",
+    text: "A primeira conversa começa pelo contexto, não por uma resposta pronta.",
   },
   {
-    name: "Emilia S.",
-    text: "Melhor advogado que já conheci na vida, nota 10 seria pouco pelo atendimento e atenção. Conheci o seu trabalho pela internet e o contratei em longa distância. Ele não se esteve em me ajudar. Super indico esse homem competente!",
-    rating: 5,
+    icon: ClipboardCheck,
+    title: "Você recebe clareza",
+    text: "Documentos, prazos e alternativas são organizados em uma linguagem compreensível.",
   },
   {
-    name: "Barbara S.",
-    text: "Maravilhoso o atendimento! Já estou com saudades, parece até que fizemos uma grande amizade, só pela atenção e respeito que vocês tiveram. Cândido em especial, sempre pronto a esclarecer as minhas dúvidas e questionamentos.",
-    rating: 5,
+    icon: Route,
+    title: "Você sabe o próximo passo",
+    text: "A orientação termina com uma decisão possível e um caminho de acompanhamento.",
   },
 ];
 
 export default function TestimonialsSection() {
   return (
-    <section id="depoimentos" className="py-8 lg:py-16 bg-ice">
+    <section id="depoimentos" className="bg-navy py-14 text-white sm:py-16 lg:py-24">
       <div className="container">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-6 lg:mb-8"
-        >
-          <p className="text-xs lg:text-sm font-semibold text-gold uppercase tracking-widest mb-2">
-            Depoimentos
-          </p>
-          <h2 className="font-serif text-2xl lg:text-3xl text-navy mb-2 lg:mb-3">
-            O que dizem nossos clientes
-          </h2>
-          <div className="flex items-center justify-center gap-2 mb-1 lg:mb-2">
-            <span className="font-bold text-navy text-sm lg:text-base">Excelente</span>
-            <div className="flex">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-              ))}
-            </div>
-          </div>
-          <p className="text-muted-foreground text-xs lg:text-sm">Somos nota máxima no Google</p>
-        </motion.div>
-
-        {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-3 gap-3 lg:gap-4">
-          {testimonials.map((testimonial, index) => (
-            <motion.div
-              key={testimonial.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white rounded-xl p-4 lg:p-5 shadow-sm hover:shadow-md transition-shadow duration-300 relative"
+        <div className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:gap-16">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.22em] text-gold">A experiência de atendimento</p>
+            <h2 className="mt-4 font-serif text-3xl leading-tight sm:text-4xl lg:text-5xl">
+              Menos promessa. Mais clareza para decidir.
+            </h2>
+            <p className="mt-5 max-w-md text-base leading-7 text-white/60">
+              Em temas previdenciários e trabalhistas, confiança nasce quando você entende o que está acontecendo e por que cada passo foi escolhido.
+            </p>
+            <a
+              href="https://wa.me/5551992851828?text=Olá%2C%20gostaria%20de%20entender%20meu%20caso."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-gold px-5 py-3 text-sm font-bold text-navy transition-colors hover:bg-gold-light"
             >
-              <Quote className="w-6 h-6 text-gold/30 absolute top-4 right-4" />
-              <div className="flex mb-2 lg:mb-3">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-3 h-3 lg:w-4 lg:h-4 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <p className="text-foreground/80 text-xs lg:text-sm leading-relaxed mb-3 lg:mb-4">
-                "{testimonial.text}"
-              </p>
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-full bg-navy/10 flex items-center justify-center">
-                  <span className="font-semibold text-navy text-xs">
-                    {testimonial.name.charAt(0)}
-                  </span>
-                </div>
-                <div>
-                  <p className="font-semibold text-navy text-xs lg:text-sm">{testimonial.name}</p>
-                  <p className="text-muted-foreground text-xs">Cliente</p>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+              Começar uma conversa <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+            </a>
+          </div>
 
-        {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-center mt-12"
-        >
-          <a
-            href="https://wa.me/5551992851828"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-3.5 bg-navy text-white font-semibold rounded-full hover:bg-navy-light transition-colors text-sm shadow-lg shadow-navy/20"
-          >
-            Venha fazer parte de nossos casos de sucesso!
-          </a>
-        </motion.div>
+          <div className="grid gap-3 sm:grid-cols-3">
+            {experience.map(({ icon: Icon, title, text }, index) => (
+              <div key={title} className="border-t border-gold/60 pt-5">
+                <span className="font-serif text-3xl text-gold">0{index + 1}</span>
+                <Icon className="mt-8 h-5 w-5 text-white/70" aria-hidden="true" />
+                <h3 className="mt-4 text-base font-bold">{title}</h3>
+                <p className="mt-3 text-sm leading-6 text-white/55">{text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

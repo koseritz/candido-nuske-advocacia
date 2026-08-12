@@ -1,82 +1,54 @@
-/*
- * Design: Advocacia Digital Contemporânea
- * Barra de estatísticas com contadores animados em fundo ice
+/**
+ * Design: autoridade serena — uma faixa de prova curta, factual e sem números inventados.
  */
-import { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { ArrowRight, Check, Compass, Scale } from "lucide-react";
 
-interface StatItemProps {
-  value: number;
-  prefix?: string;
-  suffix?: string;
-  label: string;
-}
-
-function AnimatedCounter({ value, prefix = "", suffix = "" }: { value: number; prefix?: string; suffix?: string }) {
-  const [count, setCount] = useState(0);
-  const ref = useRef<HTMLDivElement>(null);
-  const hasAnimated = useRef(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !hasAnimated.current) {
-          hasAnimated.current = true;
-          const duration = 2000;
-          const steps = 60;
-          const increment = value / steps;
-          let current = 0;
-          const timer = setInterval(() => {
-            current += increment;
-            if (current >= value) {
-              setCount(value);
-              clearInterval(timer);
-            } else {
-              setCount(Math.floor(current));
-            }
-          }, duration / steps);
-        }
-      },
-      { threshold: 0.3 }
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [value]);
-
-  return (
-    <div ref={ref} className="font-serif text-2xl lg:text-4xl font-bold text-navy">
-      {prefix}{count.toLocaleString("pt-BR")}{suffix}
-    </div>
-  );
-}
-
-function StatItem({ value, prefix, suffix, label }: StatItemProps) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.5 }}
-      className="text-center py-2 lg:py-3"
-    >
-      <AnimatedCounter value={value} prefix={prefix} suffix={suffix} />
-      <p className="text-muted-foreground text-xs lg:text-sm mt-1 lg:mt-2 max-w-[150px] mx-auto leading-tight">
-        {label}
-      </p>
-    </motion.div>
-  );
-}
+const highlights = [
+  {
+    icon: Compass,
+    eyebrow: "Experiência",
+    value: "18 anos",
+    text: "de atuação jurídica e leitura estratégica de casos",
+  },
+  {
+    icon: Scale,
+    eyebrow: "Registro",
+    value: "OAB/RS 7.089",
+    text: "atuação profissional com atendimento em todo o Brasil",
+  },
+  {
+    icon: Check,
+    eyebrow: "Método",
+    value: "Clareza antes da decisão",
+    text: "orientação organizada para você saber o próximo passo",
+  },
+];
 
 export default function StatsSection() {
   return (
-    <section id="areas" className="bg-ice py-8 lg:py-12">
-      <div className="container">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8">
-          <StatItem value={3000} prefix="+" label="clientes atendidos" />
-          <StatItem value={3500} prefix="+" label="casos de sucesso" />
-          <StatItem value={27} label="estados atendidos" />
-          <StatItem value={18} prefix="+" label="anos ajudando brasileiros a conquistar direitos" />
-        </div>
+    <section id="areas" className="border-y border-navy/10 bg-white">
+      <div className="container grid gap-0 lg:grid-cols-3">
+        {highlights.map(({ icon: Icon, eyebrow, value, text }, index) => (
+          <div
+            key={value}
+            className={`flex items-start gap-4 py-6 sm:py-7 lg:px-7 ${index > 0 ? "border-t border-navy/10 lg:border-l lg:border-t-0" : ""}`}
+          >
+            <div className="mt-1 grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[#f3eee3] text-gold">
+              <Icon className="h-4 w-4" aria-hidden="true" />
+            </div>
+            <div>
+              <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-gold">{eyebrow}</p>
+              <p className="mt-1 font-serif text-xl leading-tight text-navy">{value}</p>
+              <p className="mt-1 max-w-xs text-sm leading-5 text-navy/55">{text}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="container flex flex-col gap-3 border-t border-navy/10 py-4 text-sm sm:flex-row sm:items-center sm:justify-between">
+        <p className="text-navy/55">Previdência, trabalho e decisões que merecem análise.</p>
+        <a href="#servicos" className="inline-flex items-center gap-2 font-bold text-navy hover:text-gold">
+          Ver como podemos ajudar <ArrowRight className="h-4 w-4" aria-hidden="true" />
+        </a>
       </div>
     </section>
   );

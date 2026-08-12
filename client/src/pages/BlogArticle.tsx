@@ -2,6 +2,7 @@
  * Design: Advocacia Digital Contemporânea
  * Página individual de artigo do blog com conteúdo completo
  */
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Calendar, User, ArrowLeft } from "lucide-react";
 import { Link, useParams } from "wouter";
@@ -218,6 +219,13 @@ export default function BlogArticle() {
   const articleId = (params as any)?.id || "";
   const article = articles[articleId];
 
+  useEffect(() => {
+    if (!article) return;
+    document.title = `${article.title} | Cândido Nüske Advocacia`;
+    const description = document.querySelector('meta[name="description"]');
+    description?.setAttribute("content", article.excerpt);
+  }, [article]);
+
   if (!article) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center">
@@ -233,11 +241,11 @@ export default function BlogArticle() {
   const currentUrl = typeof window !== 'undefined' ? window.location.href : '';
 
   return (
-    <div className="min-h-screen bg-white flex flex-col">
+    <div className="min-h-screen bg-[#fbfaf7] flex flex-col">
       {/* Breadcrumb */}
       <BlogBreadcrumb items={[{ label: article.title }]} />
 
-      {/* Back Button */}      <section className="bg-gradient-to-b from-navy to-navy/90 text-white pt-12 lg:pt-16 pb-8 lg:pb-12">
+      <section className="bg-navy text-white py-12 sm:py-16 lg:py-20">
         <div className="container">
           <a href="/blog" className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors mb-6">
             <ArrowLeft className="w-4 h-4" />
@@ -253,7 +261,7 @@ export default function BlogArticle() {
                 {article.category}
               </span>
             </div>
-            <h1 className="font-serif text-3xl lg:text-4xl mb-4 leading-tight">
+            <h1 className="font-serif text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
               {article.title}
             </h1>
             <div className="flex flex-wrap gap-4 text-white/70 text-sm">
@@ -272,22 +280,24 @@ export default function BlogArticle() {
       </section>
 
       {/* Featured Image */}
-      <div className="h-64 lg:h-96 overflow-hidden bg-ice">
-        <img
-          src={article.image}
-          alt={article.title}
-          className="w-full h-full object-cover"
-        />
+      <div className="container -mt-6">
+        <div className="overflow-hidden rounded-[1.5rem] bg-ice shadow-xl">
+          <img
+            src={article.image}
+            alt={`Imagem relacionada ao artigo: ${article.title}`}
+            className="block h-auto max-h-[40vh] w-full object-cover"
+          />
+        </div>
       </div>
 
       {/* Content */}
-      <section className="py-12 lg:py-16">
-        <div className="container max-w-3xl">
+      <section className="py-10 sm:py-12 lg:py-16">
+        <div className="container max-w-4xl">
           <motion.article
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="prose prose-lg max-w-none text-muted-foreground"
+            className="blog-article rounded-[1.5rem] border border-navy/10 bg-white px-5 py-7 shadow-sm sm:px-8 sm:py-10 lg:px-12"
             dangerouslySetInnerHTML={{ __html: article.content }}
           />
 
@@ -359,10 +369,10 @@ export default function BlogArticle() {
             className="text-center"
           >
             <h2 className="font-serif text-2xl lg:text-3xl text-navy mb-3">
-              Precisa de Ajuda Profissional?
+              Quer entender o seu caso?
             </h2>
             <p className="text-muted-foreground text-base mb-6">
-              Nossos especialistas estão prontos para analisar seu caso e encontrar a melhor solução jurídica.
+              Uma conversa inicial ajuda a identificar documentos, prazos e o melhor caminho para a sua situação.
             </p>
             <a
               href="https://wa.me/5551992851828"

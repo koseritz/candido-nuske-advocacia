@@ -1,96 +1,98 @@
-/*
- * Design: Advocacia Digital Contemporânea
- * Hero split: texto à esquerda (55%) + imagem à direita (45%)
- * CTA principal + badges de confiança (Google Reviews, OAB)
+/**
+ * Design: autoridade serena — hero editorial com uma mensagem, uma prova e uma ação.
+ * A fotografia usa altura automática para não criar áreas vazias ou cortes artificiais.
  */
-import { Phone, Star, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
+import { ArrowUpRight, MapPin, Phone, ShieldCheck, Star } from "lucide-react";
 
-const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/candido-photo-nobg_57466052.png";
+const HERO_IMG =
+  "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/candido-photo-nobg_57466052.png";
 
 export default function HeroSection() {
   return (
-    <section className="relative bg-white pt-8 lg:pt-12 pb-8 lg:pb-12 overflow-hidden">
+    <section className="relative overflow-hidden bg-[#fbfaf7] pt-28 pb-8 sm:pt-32 lg:pt-36 lg:pb-14">
       <div className="container">
-        <div className="grid lg:grid-cols-2 gap-4 lg:gap-12 items-center">
-          {/* Text Content */}
+        <div className="grid items-end gap-8 lg:grid-cols-[0.93fr_1.07fr] lg:gap-14">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
-            className="order-2 lg:order-1"
+            transition={{ duration: 0.65, ease: "easeOut" }}
+            className="order-2 lg:order-1 lg:pb-8"
           >
-            <h1 className="font-serif text-3xl sm:text-4xl lg:text-[2.75rem] xl:text-5xl leading-tight text-navy mb-6" style={{paddingTop: '35px'}}>
-              Especialistas em aposentadorias e direitos do trabalhador
+            <div className="mb-5 flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.22em] text-gold">
+              <span className="h-px w-8 bg-gold" />
+              Cândido Nüske Advocacia
+            </div>
+            <h1 className="max-w-[620px] font-serif text-[2.55rem] leading-[1.05] text-navy sm:text-5xl lg:text-[4rem]">
+              Planejamento previdenciário para decidir sua aposentadoria com segurança
             </h1>
-
-            <p className="text-muted-foreground text-base lg:text-lg mb-8 max-w-lg leading-relaxed">
-              Contamos com um time de especialistas dedicados em áreas específicas, com supervisão e atuação direta do Dr. Cândido Nüske.
+            <p className="mt-6 max-w-xl text-base leading-7 text-navy/65 sm:text-lg">
+              Análise previdenciária e atuação em direitos do trabalhador para você entender suas opções, evitar decisões caras e proteger o próximo passo.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 mb-4 lg:mb-6">
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <a
-                href="https://wa.me/5551992851828"
+                href="https://wa.me/5551992851828?text=Olá%2C%20quero%20entender%20minhas%20opções%20previdenciárias."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-navy text-white font-semibold rounded-full hover:bg-navy-light transition-all duration-200 text-sm shadow-lg shadow-navy/20"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-navy px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-navy/15 transition-all hover:-translate-y-0.5 hover:bg-petrol"
               >
-                <Phone className="w-4 h-4" />
-                Marcar uma consulta online
+                <Phone className="h-4 w-4" aria-hidden="true" />
+                Conversar sobre meu caso
+                <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+              </a>
+              <a
+                href="/previdenciario"
+                className="inline-flex items-center justify-center rounded-full border border-navy/20 px-6 py-3.5 text-sm font-bold text-navy transition-colors hover:border-gold hover:text-gold"
+              >
+                Conhecer o planejamento
               </a>
             </div>
 
-            {/* Trust Badges */}
-            <div className="flex flex-wrap items-center gap-3 mt-3 lg:mt-4">
-              {/* Google Reviews */}
-              <div className="flex items-center gap-3 bg-ice rounded-xl px-3 py-2">
-                <div>
-                  <svg viewBox="0 0 24 24" className="w-6 h-6" fill="none" style={{paddingTop: '2px', marginTop: '-1px', marginBottom: '4px', width: '28px', height: '38px'}}>
-                    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/>
-                    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
-                    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
-                    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
-                  </svg>
-                </div>
-                <div>
-                  <div className="flex items-center gap-1">
-                    <span className="font-bold text-navy text-sm" style={{fontSize: '34px'}}>5</span>
-                    <div className="flex">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-3.5 h-3.5 fill-yellow-400 text-yellow-400" />
-                      ))}
-                    </div>
-                  </div>
-                  <p className="text-xs text-muted-foreground">100% avaliações</p>
-                </div>
+            <div className="mt-8 grid max-w-xl grid-cols-2 gap-3 sm:grid-cols-3">
+              <div className="border-l-2 border-gold pl-3">
+                <p className="font-serif text-2xl text-navy">18 anos</p>
+                <p className="mt-1 text-xs leading-4 text-navy/55">de experiência prática</p>
               </div>
-
-              {/* OAB Badge */}
-              <div className="flex items-center gap-2 bg-ice rounded-xl px-3 py-2">
-                <MapPin className="w-5 h-5 text-gold" />
-                <div>
-                  <p className="font-semibold text-navy text-sm">OAB/RS 7.089</p>
-                  <p className="text-xs text-muted-foreground">Atuação em todo Brasil</p>
-                </div>
+              <div className="border-l-2 border-gold pl-3">
+                <p className="font-serif text-2xl text-navy">Brasil</p>
+                <p className="mt-1 text-xs leading-4 text-navy/55">atendimento online</p>
+              </div>
+              <div className="col-span-2 border-l-2 border-gold pl-3 sm:col-span-1">
+                <p className="font-serif text-2xl text-navy">OAB/RS</p>
+                <p className="mt-1 text-xs leading-4 text-navy/55">7.089</p>
               </div>
             </div>
           </motion.div>
 
-          {/* Hero Image */}
           <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            className="order-1 lg:order-2 relative"
+            initial={{ opacity: 0, scale: 0.98 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.75, delay: 0.08, ease: "easeOut" }}
+            className="order-1 lg:order-2"
           >
-            <div className="relative rounded-2xl overflow-hidden lg:rounded-bl-[4rem] bg-gradient-to-b from-ice to-white">
+            <div className="relative overflow-hidden rounded-[2rem] bg-[#eef2f3] px-4 pt-5 sm:px-8 sm:pt-8 lg:px-12 lg:pt-10">
+              <div className="absolute left-6 top-6 z-10 flex items-center gap-2 rounded-full border border-white/70 bg-white/80 px-3 py-2 text-[11px] font-bold text-navy shadow-sm backdrop-blur sm:left-8 sm:top-8">
+                <ShieldCheck className="h-4 w-4 text-gold" aria-hidden="true" />
+                Atendimento personalizado
+              </div>
               <img
                 src={HERO_IMG}
-                alt="Dr. Cândido Nüske - Advogado"
-                className="w-full h-auto lg:max-h-[90vh] object-contain object-bottom lg:pb-[321px]" style={{marginTop: '2px'}}
+                alt="Dr. Cândido Nüske, advogado especialista em planejamento previdenciário"
+                className="mx-auto block h-auto max-h-[72vh] w-full object-contain object-bottom"
               />
+              <div className="absolute bottom-4 left-4 right-4 flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-white/70 bg-white/90 px-4 py-3 shadow-sm backdrop-blur sm:bottom-6 sm:left-6 sm:right-6">
+                <div className="flex items-center gap-2">
+                  <Star className="h-4 w-4 fill-gold text-gold" aria-hidden="true" />
+                  <span className="text-sm font-bold text-navy">5,0</span>
+                  <span className="text-xs text-navy/55">avaliação informada</span>
+                </div>
+                <div className="flex items-center gap-2 text-xs text-navy/60">
+                  <MapPin className="h-4 w-4 text-gold" aria-hidden="true" />
+                  Porto Alegre · São Paulo · online
+                </div>
+              </div>
             </div>
-
           </motion.div>
         </div>
       </div>

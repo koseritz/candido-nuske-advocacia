@@ -1,10 +1,8 @@
 /**
- * Design: Advocacia Digital Contemporânea
- * Página de Blog com grid de artigos sobre direito previdenciário e trabalhista
+ * Design: autoridade serena — blog editorial com destaque, filtros simples e caminhos claros.
  */
-import { motion } from "framer-motion";
-import { Calendar, User, ArrowRight } from "lucide-react";
-import { Link } from "wouter";
+import { useEffect, useMemo, useState } from "react";
+import { Calendar, Clock3, ArrowRight, BookOpen } from "lucide-react";
 import BlogBreadcrumb from "@/components/BlogBreadcrumb";
 import BlogFooter from "@/components/BlogFooter";
 
@@ -19,12 +17,11 @@ interface BlogPost {
   image: string;
 }
 
-// Blog articles with custom images related to each topic
 const blogPosts: BlogPost[] = [
   {
     id: "aposentadoria-anticipada",
     title: "Aposentadoria Antecipada: Saiba se você tem direito",
-    excerpt: "Entenda os critérios para aposentadoria antecipada e como o planejamento previdenciário pode antecipar sua aposentadoria em anos.",
+    excerpt: "Entenda os critérios para aposentadoria antecipada e como o planejamento previdenciário pode orientar uma decisão mais segura.",
     date: "15 de março de 2026",
     author: "Dr. Cândido Nüske",
     category: "Previdenciário",
@@ -34,7 +31,7 @@ const blogPosts: BlogPost[] = [
   {
     id: "auxilio-acidente-direitos",
     title: "Auxílio-Acidente: Conheça seus direitos e como solicitar",
-    excerpt: "Guia completo sobre o auxílio-acidente, quem tem direito, como solicitar e quais documentos são necessários para o processo.",
+    excerpt: "Guia completo sobre auxílio-acidente, requisitos, documentação e pontos que costumam gerar dúvidas.",
     date: "12 de março de 2026",
     author: "Dr. Cândido Nüske",
     category: "Previdenciário",
@@ -44,7 +41,7 @@ const blogPosts: BlogPost[] = [
   {
     id: "doenca-ocupacional-inss",
     title: "Doença Ocupacional: Como comprovar e receber benefício do INSS",
-    excerpt: "Saiba como comprovar uma doença ocupacional, quais são os procedimentos e como garantir seu direito ao benefício.",
+    excerpt: "Saiba como organizar documentos e demonstrar a relação entre a doença e a atividade profissional.",
     date: "8 de março de 2026",
     author: "Dr. Cândido Nüske",
     category: "Trabalhista",
@@ -53,8 +50,8 @@ const blogPosts: BlogPost[] = [
   },
   {
     id: "revisao-aposentadoria",
-    title: "Revisão da Aposentadoria: Como aumentar seu benefício",
-    excerpt: "Descubra as possibilidades de revisão da aposentadoria e como um planejamento adequado pode aumentar significativamente seu benefício.",
+    title: "Revisão da Aposentadoria: Como avaliar seu benefício",
+    excerpt: "Conheça situações que podem justificar uma análise de revisão e quais documentos ajudam na investigação.",
     date: "5 de março de 2026",
     author: "Dr. Cândido Nüske",
     category: "Previdenciário",
@@ -64,7 +61,7 @@ const blogPosts: BlogPost[] = [
   {
     id: "direitos-trabalhador-demissao",
     title: "Direitos do Trabalhador na Demissão: O que você precisa saber",
-    excerpt: "Conheça todos os seus direitos quando é demitido, incluindo indenizações, multa do FGTS e como recorrer de uma demissão injusta.",
+    excerpt: "Um panorama dos principais pontos para revisar quando o vínculo de trabalho chega ao fim.",
     date: "1º de março de 2026",
     author: "Dr. Cândido Nüske",
     category: "Trabalhista",
@@ -73,8 +70,8 @@ const blogPosts: BlogPost[] = [
   },
   {
     id: "planejamento-previdenciario-beneficios",
-    title: "Planejamento Previdenciário: Os 5 benefícios que você não conhecia",
-    excerpt: "Descubra como um planejamento previdenciário adequado pode economizar dinheiro e garantir uma aposentadoria tranquila.",
+    title: "Planejamento Previdenciário: 5 benefícios de olhar antes",
+    excerpt: "Como uma análise previdenciária pode organizar escolhas, prazos, contribuições e expectativas de aposentadoria.",
     date: "25 de fevereiro de 2026",
     author: "Dr. Cândido Nüske",
     category: "Previdenciário",
@@ -83,128 +80,92 @@ const blogPosts: BlogPost[] = [
   },
 ];
 
-export default function Blog() {
+const categories = ["Todos", "Previdenciário", "Trabalhista"];
+
+function ArticleCard({ post, featured = false }: { post: BlogPost; featured?: boolean }) {
   return (
-    <div className="min-h-screen bg-white flex flex-col">
-      {/* Breadcrumb */}
+    <article className={`group overflow-hidden rounded-[1.5rem] border border-navy/10 bg-white ${featured ? "lg:grid lg:grid-cols-[1.05fr_0.95fr]" : ""}`}>
+      <div className="overflow-hidden bg-ice">
+        <img src={post.image} alt={post.title} className="block h-auto max-h-[40vh] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" />
+      </div>
+      <div className={`flex flex-col ${featured ? "p-6 sm:p-8 lg:p-10" : "p-5"}`}>
+        <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.18em] text-gold">
+          <BookOpen className="h-3.5 w-3.5" aria-hidden="true" />
+          {post.category}
+        </div>
+        <h2 className={`mt-4 font-serif leading-tight text-navy ${featured ? "text-3xl sm:text-4xl" : "text-2xl"}`}>{post.title}</h2>
+        <p className="mt-4 text-sm leading-6 text-navy/60">{post.excerpt}</p>
+        <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-navy/45">
+          <span className="inline-flex items-center gap-1.5"><Calendar className="h-3.5 w-3.5" /> {post.date}</span>
+          <span className="inline-flex items-center gap-1.5"><Clock3 className="h-3.5 w-3.5" /> {post.readTime}</span>
+        </div>
+        <a href={`/blog/${post.id}`} className="mt-7 inline-flex items-center gap-2 text-sm font-bold text-navy hover:text-gold">
+          Ler artigo <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+        </a>
+      </div>
+    </article>
+  );
+}
+
+export default function Blog() {
+  const [activeCategory, setActiveCategory] = useState("Todos");
+
+  useEffect(() => {
+    document.title = "Blog de Direito Previdenciário e Trabalhista | Cândido Nüske";
+    const description = document.querySelector('meta[name="description"]');
+    description?.setAttribute("content", "Artigos sobre planejamento previdenciário, aposentadoria, auxílio-acidente e direitos do trabalhador, escritos por Dr. Cândido Nüske.");
+  }, []);
+  const filteredPosts = useMemo(
+    () => activeCategory === "Todos" ? blogPosts : blogPosts.filter((post) => post.category === activeCategory),
+    [activeCategory],
+  );
+  const featured = filteredPosts[0];
+  const rest = filteredPosts.slice(1);
+
+  return (
+    <div className="flex min-h-screen flex-col bg-[#fbfaf7]">
       <BlogBreadcrumb items={[]} />
-
-      {/* Hero Section */}
-      <section className="bg-gradient-to-b from-navy to-navy/90 text-white pt-16 lg:pt-24 pb-12 lg:pb-16">
-        <div className="container">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-3xl"
-          >
-            <p className="text-gold text-xs lg:text-sm font-semibold uppercase tracking-widest mb-3">
-              Blog & Artigos
-            </p>
-            <h1 className="font-serif text-4xl lg:text-5xl mb-4 leading-tight">
-              Conhecimento Jurídico ao seu Alcance
-            </h1>
-            <p className="text-white/70 text-base lg:text-lg">
-              Artigos, dicas e orientações sobre direito previdenciário, trabalhista e consultoria jurídica para proteger seus direitos.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Blog Posts Grid */}
-      <section className="py-12 lg:py-16">
-        <div className="container">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            {blogPosts.map((post, index) => (
-              <motion.article
-                key={post.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-80px" }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group bg-white rounded-xl overflow-hidden border border-border hover:border-gold/50 transition-all duration-300 hover:shadow-lg"
-              >
-                {/* Image */}
-                <div className="relative h-48 overflow-hidden bg-ice">
-                  <img
-                    src={post.image}
-                    alt={post.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute top-3 left-3">
-                    <span className="inline-block bg-gold text-navy text-xs font-semibold px-3 py-1 rounded-full">
-                      {post.category}
-                    </span>
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className="p-4 lg:p-5">
-                  <h3 className="font-serif text-lg lg:text-xl text-navy mb-2 line-clamp-2 group-hover:text-gold transition-colors">
-                    {post.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
-                    {post.excerpt}
-                  </p>
-
-                  {/* Meta */}
-                  <div className="flex flex-col gap-2 mb-4 pb-4 border-b border-border">
-                    <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                      <Calendar className="w-3 h-3" />
-                      <span>{post.date}</span>
-                      <span className="text-gold">•</span>
-                      <span>{post.readTime}</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                      <User className="w-3 h-3" />
-                      <span>{post.author}</span>
-                    </div>
-                  </div>
-
-                  {/* CTA */}
-                  <a href={`/blog/${post.id}`} className="inline-flex items-center gap-2 text-navy font-semibold text-sm hover:text-gold transition-colors group/link">
-                    Ler Artigo
-                    <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
-                  </a>
-                </div>
-              </motion.article>
-            ))}
+      <main className="flex-1">
+        <section className="bg-navy py-14 text-white sm:py-18 lg:py-24">
+          <div className="container">
+            <p className="text-xs font-bold uppercase tracking-[0.22em] text-gold">Conteúdo para decidir melhor</p>
+            <h1 className="mt-4 max-w-3xl font-serif text-4xl leading-tight sm:text-5xl lg:text-6xl">Blog jurídico sobre previdência e trabalho</h1>
+            <p className="mt-5 max-w-2xl text-base leading-7 text-white/60 sm:text-lg">Informação organizada para quem precisa entender aposentadoria, planejamento previdenciário, auxílio-acidente e direitos do trabalhador.</p>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA Section */}
-      <section className="py-12 lg:py-16 bg-ice">
-        <div className="container">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.6 }}
-            className="max-w-2xl mx-auto text-center"
-          >
-            <h2 className="font-serif text-2xl lg:text-3xl text-navy mb-3">
-              Precisa de Orientação Jurídica?
-            </h2>
-            <p className="text-muted-foreground text-base mb-6">
-              Nossos especialistas estão prontos para analisar seu caso e encontrar a melhor solução jurídica para você.
-            </p>
-            <a
-              href="https://wa.me/5551992851828"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-navy text-white font-semibold rounded-full hover:bg-navy/90 transition-colors text-sm"
-            >
-              <svg viewBox="0 0 24 24" className="w-4 h-4 fill-white">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-              </svg>
-              Fale Conosco no WhatsApp
-            </a>
-          </motion.div>
-        </div>
-      </section>
+        <section className="container py-10 sm:py-12 lg:py-16">
+          <div className="flex flex-wrap items-center justify-between gap-4 border-b border-navy/10 pb-5">
+            <p className="text-sm text-navy/55">Artigos assinados por Dr. Cândido Nüske</p>
+            <div className="flex flex-wrap gap-2" aria-label="Filtrar artigos por categoria">
+              {categories.map((category) => (
+                <button key={category} type="button" onClick={() => setActiveCategory(category)} className={`rounded-full px-4 py-2 text-xs font-bold transition-colors ${activeCategory === category ? "bg-navy text-white" : "border border-navy/15 text-navy hover:border-gold hover:text-gold"}`}>
+                  {category}
+                </button>
+              ))}
+            </div>
+          </div>
 
-      {/* Blog Footer */}
+          {featured ? (
+            <div className="mt-8">
+              <ArticleCard post={featured} featured />
+              {rest.length > 0 && <div className="mt-5 grid gap-5 md:grid-cols-2 lg:grid-cols-3">{rest.map((post) => <ArticleCard key={post.id} post={post} />)}</div>}
+            </div>
+          ) : (
+            <p className="py-16 text-center text-navy/55">Nenhum artigo encontrado nesta categoria.</p>
+          )}
+        </section>
+
+        <section className="bg-[#f3eee3] py-12 sm:py-14">
+          <div className="container flex flex-col justify-between gap-6 lg:flex-row lg:items-center">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-gold">Ainda ficou alguma dúvida?</p>
+              <h2 className="mt-2 font-serif text-3xl text-navy">Converse com o escritório sobre o seu contexto.</h2>
+            </div>
+            <a href="https://wa.me/5551992851828?text=Olá%2C%20vim%20pelo%20blog%20e%20gostaria%20de%20orientação." target="_blank" rel="noopener noreferrer" className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-navy px-6 py-3.5 text-sm font-bold text-white hover:bg-petrol">Falar pelo WhatsApp <ArrowRight className="h-4 w-4" /></a>
+          </div>
+        </section>
+      </main>
       <BlogFooter />
     </div>
   );

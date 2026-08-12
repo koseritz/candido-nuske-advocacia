@@ -1,106 +1,61 @@
-/*
- * Design: Advocacia Digital Contemporânea
- * Seção "Quem Somos" com texto à esquerda e cards de áreas à direita
- * Similar ao layout da Arraes & Centeno
+/**
+ * Design: autoridade serena — narrativa institucional em dois movimentos: método e confiança.
  */
-import { motion } from "framer-motion";
-import { Scale, Shield, Phone, ArrowRight } from "lucide-react";
+import { ArrowUpRight, Check, FileSearch, Handshake } from "lucide-react";
 
-const TEAM_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/team-meeting-QrDEaj3q4CMMmy5e4wDKyN.webp";
+const OFFICE_IMG =
+  "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/office-interior-3J3tza3LGJVDXFjKGCLstJ.webp";
 
-const areas = [
-  {
-    icon: Scale,
-    title: "Direito Trabalhista",
-    description: "Advogamos exclusivamente para trabalhadores. Cuidamos do seu processo onde quer que você esteja.",
-  },
-  {
-    icon: Shield,
-    title: "Direito Previdenciário",
-    description: "Somos determinados em conquistar a melhor aposentadoria e benefícios previdenciários. Atendimento online e presencial.",
-  },
+const principles = [
+  { icon: FileSearch, title: "Leitura do caso", text: "Antes de sugerir um caminho, organizamos documentos, histórico e objetivos." },
+  { icon: Handshake, title: "Orientação próxima", text: "Você entende as alternativas, os limites e o que realmente muda a decisão." },
+  { icon: Check, title: "Estratégia possível", text: "A orientação é construída para a sua realidade, não para um modelo pronto." },
 ];
 
 export default function AboutSection() {
   return (
-    <section id="quem-somos" className="py-8 lg:py-16 bg-white">
+    <section id="quem-somos" className="bg-[#fbfaf7] py-14 sm:py-16 lg:py-24">
       <div className="container">
-        <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-start">
-          {/* Left: About Text */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="font-serif text-2xl lg:text-3xl text-navy mb-3 lg:mb-4 leading-tight">
-              Descubra como podemos ajudar na sua causa!
-            </h2>
-            <p className="text-muted-foreground text-sm lg:text-base leading-relaxed mb-3 lg:mb-4">
-              Com 18 anos de experiência, o advogado Dr. Cândido Nüske tem se dedicado a atender clientes em questões de extrema relevância. Sua vasta experiência prática lhe permitiu adquirir um conhecimento profundo das leis e julgamentos atuais, garantindo assim a proteção dos direitos de seus clientes.
-            </p>
-            <p className="text-muted-foreground text-sm lg:text-base leading-relaxed mb-4 lg:mb-6">
-              Com uma abordagem centrada no cliente e em suas necessidades específicas, Dr. Cândido Nüske e toda sua equipe têm ajudado pessoas e empresas de todos os portes nos desafios legais a encontrar soluções eficazes para a proteção do seu patrimônio.
-            </p>
-
-            <div className="relative rounded-2xl overflow-hidden shadow-lg">
+        <div className="grid items-center gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
+          <div className="relative">
+            <div className="overflow-hidden rounded-[1.75rem] bg-ice">
               <img
-                src={TEAM_IMG}
-                alt="Equipe Cândido Nüske Advocacia"
-                className="w-full h-auto max-h-[40vh] object-cover"
+                src={OFFICE_IMG}
+                alt="Ambiente profissional de atendimento jurídico"
+                className="block h-auto max-h-[40vh] w-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy/40 to-transparent" />
             </div>
-          </motion.div>
+            <div className="absolute -bottom-5 right-4 max-w-[220px] rounded-2xl bg-navy p-5 text-white shadow-xl sm:right-8">
+              <p className="font-serif text-3xl text-gold">18</p>
+              <p className="mt-1 text-sm leading-5 text-white/70">anos transformando dúvidas complexas em decisões mais claras.</p>
+            </div>
+          </div>
 
-          {/* Right: Area Cards */}
-          <div className="space-y-3 lg:space-y-4">
-            <motion.p
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="text-xs lg:text-sm font-semibold text-gold uppercase tracking-widest mb-2"
-            >
-              Conheça nossas áreas de atuação
-            </motion.p>
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.22em] text-gold">O escritório</p>
+            <h2 className="mt-4 max-w-2xl font-serif text-3xl leading-tight text-navy sm:text-4xl lg:text-5xl">
+              Você não precisa decidir no escuro.
+            </h2>
+            <p className="mt-5 max-w-2xl text-base leading-7 text-navy/65 sm:text-lg">
+              O trabalho do escritório é transformar o emaranhado de documentos, regras e possibilidades em uma visão compreensível do seu caso — com atuação em planejamento previdenciário, aposentadorias e direitos do trabalhador.
+            </p>
+            <p className="mt-4 max-w-2xl text-base leading-7 text-navy/65 sm:text-lg">
+              Cândido Nüske acompanha a estratégia de perto, com linguagem direta e foco no que muda sua decisão de verdade.
+            </p>
 
-            {areas.map((area, index) => (
-              <motion.div
-                key={area.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.5, delay: index * 0.15 }}
-                className="bg-ice rounded-xl p-4 lg:p-6 border border-border/50 hover:shadow-lg hover:shadow-navy/5 transition-all duration-300 group"
-              >
-                <div className="w-10 h-10 rounded-lg bg-navy/10 flex items-center justify-center mb-2 lg:mb-3 group-hover:bg-navy/15 transition-colors">
-                  <area.icon className="w-6 h-6 text-navy" />
+            <div className="mt-8 grid gap-4 sm:grid-cols-3">
+              {principles.map(({ icon: Icon, title, text }) => (
+                <div key={title} className="border-t-2 border-gold pt-4">
+                  <Icon className="h-5 w-5 text-gold" aria-hidden="true" />
+                  <h3 className="mt-3 text-sm font-bold text-navy">{title}</h3>
+                  <p className="mt-2 text-sm leading-5 text-navy/55">{text}</p>
                 </div>
-                <h3 className="font-serif text-lg lg:text-xl text-navy mb-2">{area.title}</h3>
-                <p className="text-muted-foreground text-xs lg:text-sm leading-relaxed mb-3 lg:mb-4">
-                  {area.description}
-                </p>
-                <div className="flex flex-col sm:flex-row gap-2 lg:gap-3">
-                  <a
-                    href="#servicos"
-                    className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-navy text-white text-xs lg:text-sm font-medium rounded-full hover:bg-navy-light transition-colors"
-                  >
-                    Ver serviços
-                    <ArrowRight className="w-3 h-3 lg:w-4 lg:h-4" />
-                  </a>
-                  <a
-                    href="https://wa.me/5551992851828"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 px-4 py-2 border border-navy text-navy text-xs lg:text-sm font-medium rounded-full hover:bg-navy hover:text-white transition-colors"
-                  >
-                    <Phone className="w-3 h-3 lg:w-4 lg:h-4" />
-                    Falar com um Advogado
-                  </a>
-                </div>
-              </motion.div>
-            ))}
+              ))}
+            </div>
+
+            <a href="#contato" className="mt-8 inline-flex items-center gap-2 text-sm font-bold text-navy hover:text-gold">
+              Conhecer o escritório <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+            </a>
           </div>
         </div>
       </div>

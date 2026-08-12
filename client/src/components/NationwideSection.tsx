@@ -1,109 +1,35 @@
-/*
- * Design: Advocacia Digital Contemporânea
- * Seção sobre atendimento digital em todo o Brasil
- * Layout com imagem de fundo e overlay
+/**
+ * Design: autoridade serena — atendimento nacional explicado sem promessas infladas.
  */
-import { motion } from "framer-motion";
-import { Globe, Smartphone, Shield, Clock } from "lucide-react";
-
-const OFFICE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/office-interior-3J3tza3LGJVDXFjKGCLstJ.webp";
-
-const features = [
-  {
-    icon: Globe,
-    title: "Atuação em todo o Brasil",
-    description: "Os processos judiciais no Brasil hoje são todos via internet e à distância. Podemos atender você de qualquer lugar do mundo.",
-  },
-  {
-    icon: Smartphone,
-    title: "100% Digital",
-    description: "A contratação, assinatura de documentos, envio de materiais e pagamento são feitos totalmente online.",
-  },
-  {
-    icon: Shield,
-    title: "Segurança e Simplicidade",
-    description: "Nosso sistema é rápido, simples e seguro, garantindo uma experiência eficiente e sem complicações.",
-  },
-  {
-    icon: Clock,
-    title: "Atendimento 24h",
-    description: "Protegemos seus direitos com atendimento emergencial 24h. Agimos com máxima eficiência para garantir a segurança do seu patrimônio.",
-  },
-];
+import { ArrowUpRight, Laptop, MapPin, Video } from "lucide-react";
 
 export default function NationwideSection() {
   return (
-    <section className="py-8 lg:py-16 bg-white overflow-hidden">
+    <section className="bg-[#fbfaf7] py-14 sm:py-16 lg:py-24">
       <div className="container">
-        <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
-          {/* Image */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.6 }}
-            className="relative"
-          >
-            <div className="rounded-2xl overflow-hidden shadow-xl">
-              <img
-                src={OFFICE_IMG}
-                alt="Escritório moderno"
-                className="w-full h-auto max-h-[40vh] object-cover"
-              />
-            </div>
-            {/* Floating card */}
-            <div className="absolute -bottom-4 -right-2 lg:right-6 bg-white rounded-lg shadow-lg p-3 lg:p-4 max-w-[200px]">
-              <div className="flex items-center gap-2 mb-1">
-                <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center">
-                  <Globe className="w-4 h-4 text-green-600" />
-                </div>
-                <div>
-                  <p className="font-bold text-navy text-base">27</p>
-                  <p className="text-xs text-muted-foreground">Estados + DF</p>
-                </div>
+        <div className="overflow-hidden rounded-[1.75rem] bg-[#e9eef0]">
+          <div className="grid items-center lg:grid-cols-[1fr_0.8fr]">
+            <div className="p-7 sm:p-10 lg:p-14">
+              <p className="text-xs font-bold uppercase tracking-[0.22em] text-gold">Atendimento nacional</p>
+              <h2 className="mt-4 max-w-xl font-serif text-3xl leading-tight text-navy sm:text-4xl lg:text-5xl">
+                A distância não precisa atrapalhar uma boa orientação.
+              </h2>
+              <p className="mt-5 max-w-xl text-base leading-7 text-navy/60">
+                O escritório atende pessoas de diferentes estados por videoconferência, com organização de documentos e acompanhamento próximo em cada etapa.
+              </p>
+              <div className="mt-7 grid gap-4 sm:grid-cols-3">
+                <div className="flex items-start gap-3"><Video className="mt-1 h-5 w-5 text-gold" aria-hidden="true" /><span className="text-sm leading-5 text-navy/65">Reunião online</span></div>
+                <div className="flex items-start gap-3"><Laptop className="mt-1 h-5 w-5 text-gold" aria-hidden="true" /><span className="text-sm leading-5 text-navy/65">Documentos digitais</span></div>
+                <div className="flex items-start gap-3"><MapPin className="mt-1 h-5 w-5 text-gold" aria-hidden="true" /><span className="text-sm leading-5 text-navy/65">Atendimento no Brasil</span></div>
               </div>
-              <p className="text-xs text-muted-foreground">Cobertura nacional</p>
+              <a href="#contato" className="mt-8 inline-flex items-center gap-2 text-sm font-bold text-navy hover:text-gold">
+                Ver formas de atendimento <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+              </a>
             </div>
-          </motion.div>
-
-          {/* Content */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.6 }}
-          >
-            <p className="text-xs lg:text-sm font-semibold text-gold uppercase tracking-widest mb-2">
-              Atendimento Digital
-            </p>
-            <h2 className="font-serif text-2xl lg:text-3xl text-navy mb-3 lg:mb-4 leading-tight">
-              A distância NÃO é um obstáculo!
-            </h2>
-            <p className="text-muted-foreground text-sm lg:text-base leading-relaxed mb-4 lg:mb-6">
-              Independentemente da sua localização, estamos prontos para atender você. Com apenas um clique, você pode falar conosco e contar com nosso suporte jurídico especializado.
-            </p>
-
-            <div className="grid sm:grid-cols-2 gap-3 lg:gap-4">
-              {features.map((feature, index) => (
-                <motion.div
-                  key={feature.title}
-                  initial={{ opacity: 0, y: 15 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="flex gap-2"
-                >
-                  <div className="w-8 h-8 rounded-lg bg-ice flex-shrink-0 flex items-center justify-center">
-                    <feature.icon className="w-4 h-4 text-navy" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-navy text-xs lg:text-sm mb-1">{feature.title}</h4>
-                    <p className="text-muted-foreground text-xs leading-relaxed">{feature.description}</p>
-                  </div>
-                </motion.div>
-              ))}
+            <div className="hidden self-stretch bg-navy p-10 lg:flex lg:items-end">
+              <p className="max-w-xs font-serif text-3xl leading-tight text-white">Uma conversa bem conduzida já organiza muita coisa.</p>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

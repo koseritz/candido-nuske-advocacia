@@ -18,9 +18,9 @@ interface BlogBreadcrumbProps {
 
 export default function BlogBreadcrumb({ items }: BlogBreadcrumbProps) {
   return (
-    <nav className="bg-ice py-3 px-4 lg:px-0" aria-label="Breadcrumb">
-      <div className="container max-w-4xl mx-auto">
-        <ol className="flex items-center gap-2 text-sm">
+    <nav className="border-b border-navy/10 bg-white py-3" aria-label="Breadcrumb">
+      <div className="container max-w-5xl">
+        <ol className="flex min-w-0 flex-wrap items-center gap-2 text-xs sm:text-sm">
           {/* Home Link */}
           <li>
             <Link href="/" className="flex items-center gap-1 text-navy hover:text-petrol transition-colors">
@@ -46,7 +46,7 @@ export default function BlogBreadcrumb({ items }: BlogBreadcrumbProps) {
                   {item.label}
                 </Link>
               ) : (
-                <span className="text-muted-foreground">{item.label}</span>
+                <span className="max-w-[220px] truncate text-muted-foreground sm:max-w-[460px]">{item.label}</span>
               )}
             </li>
           ))}

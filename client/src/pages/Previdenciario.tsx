@@ -273,10 +273,10 @@ export default function Previdenciario() {
   ];
 
   const stakes = [
-    { num: "R$ 200 mil", label: "Diferença potencial entre a melhor e a pior aposentadoria ao longo da vida" },
-    { num: "5 anos", label: "Que podem ser economizados com planejamento correto das contribuições" },
-    { num: "72%", label: "Dos brasileiros não sabem quando poderão se aposentar nem quanto vão receber" },
-    { num: "3 em 4", label: "Pessoas que contribuem acima do necessário sem saber — dinheiro que não volta" },
+    { num: "CNIS", label: "Histórico contributivo revisado para identificar vínculos e pendências" },
+    { num: "Regras", label: "Cenários de aposentadoria comparados de acordo com a sua história" },
+    { num: "Valores", label: "Projeções organizadas para você decidir quanto e como contribuir" },
+    { num: "Família", label: "Dependentes, proteção e efeitos da decisão considerados na análise" },
   ];
 
   const planFeatures = [
@@ -333,39 +333,45 @@ export default function Previdenciario() {
 
       <main>
         {/* ─── HERO ─── */}
-        <section className="relative bg-navy text-white pt-28 lg:pt-36 pb-20 lg:pb-28 overflow-hidden">
-          {/* Decorative circles */}
-          <div className="absolute -top-24 -right-24 w-[400px] h-[400px] rounded-full border border-gold/10 pointer-events-none" />
-          <div className="absolute -bottom-32 -left-24 w-[300px] h-[300px] rounded-full border border-gold/8 pointer-events-none" />
-
-          <div className="container relative z-10">
+        <section className="relative overflow-hidden bg-navy py-14 text-white sm:py-16 lg:py-24">
+          <div className="container relative z-10 grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
-              className="max-w-2xl"
             >
-              <p className="text-[11px] uppercase tracking-[3px] text-gold mb-10 font-medium">
-                Cândido Nüske Advocacia
-              </p>
-              <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.1] mb-6">
-                Planejamento{" "}
-                <em className="italic text-gold">Previdenciário</em>
+              <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-gold">Cândido Nüske Advocacia</p>
+              <h1 className="mt-5 max-w-xl font-serif text-4xl font-bold leading-[1.05] sm:text-5xl lg:text-6xl">
+                Planejamento previdenciário para sua aposentadoria
               </h1>
-              <p className="text-white/60 text-base lg:text-lg leading-relaxed max-w-lg mb-10 font-light">
-                Descubra sua data exata de aposentadoria, quanto vai receber e
-                qual a melhor estratégia de contribuição — com análise completa
-                e personalizada.
+              <p className="mt-6 max-w-lg text-base leading-7 text-white/65 sm:text-lg">
+                Entenda datas, cenários de contribuição e possibilidades antes de tomar uma decisão que pode acompanhar você por muitos anos.
               </p>
               <a
-                href="https://wa.me/5551992851828?text=Ol%C3%A1%2C+gostaria+de+contratar+a+An%C3%A1lise+Previd%C3%AAncia+Completa"
+                href="https://wa.me/5551992851828?text=Olá%2C%20quero%20entender%20meu%20planejamento%20previdenciário."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 bg-gold text-navy px-7 py-3.5 text-sm font-semibold hover:bg-gold-light transition-colors"
+                className="mt-8 inline-flex items-center gap-3 rounded-full bg-gold px-6 py-3.5 text-sm font-bold text-navy transition-colors hover:bg-gold-light"
               >
-                Contratar Análise Completa
-                <ArrowRight className="w-4 h-4" />
+                Contratar análise completa <ArrowRight className="h-4 w-4" />
               </a>
+              <p className="mt-4 text-xs text-white/45">Atendimento online em todo o Brasil · Porto Alegre e São Paulo</p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.98 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.75, delay: 0.08 }}
+              className="relative overflow-hidden rounded-[1.75rem] bg-[#1c3547] px-5 pt-6 sm:px-10 sm:pt-10"
+            >
+              <img
+                src={HERO_IMG}
+                alt="Dr. Cândido Nüske, especialista em planejamento previdenciário"
+                className="mx-auto block h-auto max-h-[40vh] w-full object-contain object-bottom"
+              />
+              <div className="absolute bottom-4 left-4 right-4 rounded-2xl border border-white/10 bg-navy/85 px-4 py-3 backdrop-blur sm:bottom-6 sm:left-6 sm:right-6">
+                <p className="text-sm font-bold text-white">Análise individualizada</p>
+                <p className="mt-1 text-xs text-white/55">CNIS, regras, cenários e próximos passos em um só parecer.</p>
+              </div>
             </motion.div>
           </div>
         </section>
@@ -383,12 +389,10 @@ export default function Previdenciario() {
                 O que está em jogo
               </p>
               <h2 className="font-serif text-3xl lg:text-4xl text-white mb-4 leading-tight">
-                Aposentar-se sem planejamento pode custar caro
+                Aposentar-se sem planejamento pode gerar escolhas difíceis de reverter
               </h2>
               <p className="text-white/50 text-base leading-relaxed mb-10">
-                A maioria dos brasileiros não sabe quando vai se aposentar, quanto vai
-                receber ou se está contribuindo da forma mais vantajosa. Os números
-                mostram o tamanho do problema:
+                Uma análise previdenciária organiza o que costuma ficar espalhado: histórico de contribuições, regras aplicáveis, cenários de valor e proteção familiar. O objetivo é decidir com mais clareza antes do requerimento.
               </p>
             </motion.div>
 
@@ -588,30 +592,18 @@ export default function Previdenciario() {
                   CNIS.
                 </p>
 
-                <div className="flex gap-6 pt-6 border-t border-gold/20">
+                <div className="grid grid-cols-3 gap-4 border-t border-gold/20 pt-6">
                   <div>
-                    <span className="font-serif text-2xl text-gold font-semibold leading-none">
-                      <AnimatedCounter value={100} prefix="+" />
-                    </span>
-                    <p className="text-white/40 text-[11px] mt-1">
-                      clientes atendidos
-                    </p>
+                    <span className="font-serif text-2xl font-semibold leading-none text-gold">18</span>
+                    <p className="mt-1 text-[11px] text-white/40">anos de experiência</p>
                   </div>
                   <div>
-                    <span className="font-serif text-2xl text-gold font-semibold leading-none">
-                      <AnimatedCounter value={10} suffix="+" />
-                    </span>
-                    <p className="text-white/40 text-[11px] mt-1">
-                      anos de atuação
-                    </p>
+                    <span className="font-serif text-2xl font-semibold leading-none text-gold">OAB/RS</span>
+                    <p className="mt-1 text-[11px] text-white/40">7.089</p>
                   </div>
                   <div>
-                    <span className="font-serif text-2xl text-gold font-semibold leading-none">
-                      2
-                    </span>
-                    <p className="text-white/40 text-[11px] mt-1">
-                      escritórios: POA e SP
-                    </p>
+                    <span className="font-serif text-2xl font-semibold leading-none text-gold">Brasil</span>
+                    <p className="mt-1 text-[11px] text-white/40">atendimento online</p>
                   </div>
                 </div>
               </motion.div>

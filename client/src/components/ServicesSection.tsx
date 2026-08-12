@@ -1,126 +1,81 @@
-/*
- * Design: Advocacia Digital Contemporânea
- * Grid 3x2 de cards de serviço com borda superior colorida
- * Inspirado na seção "De qual destes serviços você precisa?" da Arraes & Centeno
+/**
+ * Design: autoridade serena — serviços organizados por decisão, não por uma grade genérica.
  */
-import { motion } from "framer-motion";
-import { FileText, AlertTriangle, HeartPulse, HardHat, Users, Brain, ArrowRight } from "lucide-react";
-import { Link } from "wouter";
-
-const JUSTICE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/justice-abstract-ZGArDhsQquBqbZy4TbWTwx.webp";
+import { ArrowRight, BriefcaseBusiness, FileText, HeartPulse, Landmark } from "lucide-react";
 
 const services = [
   {
-    icon: FileText,
-    title: "Planejamento de Aposentadoria",
-    description: "Um estudo único e individualizado, feito por nossos especialistas, com o critério técnico e conhecimento necessários à sua aposentadoria.",
-    link: "/previdenciario",
+    icon: Landmark,
+    category: "Previdenciário",
+    title: "Planejamento previdenciário",
+    description: "Entenda quando se aposentar, quanto poderá receber e quais decisões merecem atenção agora.",
+    href: "/previdenciario",
+    featured: true,
   },
   {
-    icon: AlertTriangle,
-    title: "Auxílio-acidente",
-    description: "Sofreu um acidente ou tem uma doença ocupacional? Saiba se você pode ter direito ao auxílio-acidente e garanta seus benefícios.",
+    icon: FileText,
+    category: "Previdenciário",
+    title: "Aposentadorias e benefícios",
+    description: "Análise de requisitos, documentos e caminhos para requerimentos e revisões.",
+    href: "#contato",
+    featured: false,
   },
   {
     icon: HeartPulse,
-    title: "Doença Ocupacional",
-    description: "Uma vez comprovada que a doença do trabalhador é ocupacional, ele recebe tratamento diferenciado da lei previdenciária e da lei trabalhista.",
+    category: "Trabalhista",
+    title: "Auxílio-acidente e incapacidade",
+    description: "Orientação para situações em que a saúde ou uma sequela afetam a vida profissional.",
+    href: "#contato",
+    featured: false,
   },
   {
-    icon: HardHat,
-    title: "Acidente de Trabalho",
-    description: "Entenda os seus direitos em caso de acidente de trabalho, os deveres das empresas e como agir para garantir proteção.",
-  },
-  {
-    icon: Users,
-    title: "Direito Bancário",
-    description: "Protegemos pessoas e empresas das abusividades bancárias, garantindo seus direitos como consumidor de serviços financeiros.",
-  },
-  {
-    icon: Brain,
-    title: "Direito Tributário",
-    description: "Proteção e melhores opções de tributação para o contribuinte, com planejamento tributário estratégico e defesa fiscal.",
+    icon: BriefcaseBusiness,
+    category: "Trabalhista",
+    title: "Direitos do trabalhador",
+    description: "Atuação e orientação para decisões relacionadas ao vínculo e à proteção profissional.",
+    href: "#contato",
+    featured: false,
   },
 ];
 
 export default function ServicesSection() {
   return (
-    <section id="servicos" className="py-8 lg:py-16 bg-white">
-      {/* Banner */}
-      <div className="relative mb-8 lg:mb-12">
-        <div className="relative h-[200px] lg:h-[280px] overflow-hidden">
-          <img
-            src={JUSTICE_IMG}
-            alt="Advocacia digital transformando vidas"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-navy/80" />
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center px-4">
-              <motion.h2
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="font-serif text-2xl lg:text-3xl text-white mb-2 lg:mb-3 leading-tight"
-              >
-                Advocacia de excelência<br />transformando vidas.
-              </motion.h2>
-              <motion.p
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-white/80 text-xs lg:text-sm max-w-2xl mx-auto"
-              >
-                Oferecemos serviços jurídicos especializados para proteger direitos trabalhistas, previdenciários, bancários e tributários.
-              </motion.p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Services Grid */}
+    <section id="servicos" className="bg-white py-14 sm:py-16 lg:py-24">
       <div className="container">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-4">
-          {services.map((service, index) => (
-            <motion.div
-              key={service.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.4, delay: index * 0.08 }}
-              className="group bg-white border border-border rounded-xl p-4 lg:p-5 hover:shadow-xl hover:shadow-navy/5 transition-all duration-300 relative overflow-hidden"
-            >
-              {/* Top border accent */}
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-navy to-petrol opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="flex flex-col justify-between gap-5 border-b border-navy/10 pb-8 lg:flex-row lg:items-end">
+          <div className="max-w-2xl">
+            <p className="text-xs font-bold uppercase tracking-[0.22em] text-gold">Como podemos ajudar</p>
+            <h2 className="mt-3 font-serif text-3xl leading-tight text-navy sm:text-4xl lg:text-5xl">
+              O próximo passo fica mais simples quando o caminho é explicado.
+            </h2>
+          </div>
+          <p className="max-w-sm text-sm leading-6 text-navy/55 lg:text-right">
+            Escolha o tema mais próximo da sua situação e converse com o escritório para entender a análise adequada.
+          </p>
+        </div>
 
-              <div className="w-9 h-9 rounded-lg bg-ice flex items-center justify-center mb-2 lg:mb-3 group-hover:bg-navy/10 transition-colors">
-                <service.icon className="w-4 h-4 text-navy" />
+        <div className="mt-8 grid gap-4 lg:grid-cols-12">
+          {services.map(({ icon: Icon, category, title, description, href, featured }) => (
+            <a
+              key={title}
+              href={href}
+              className={`group relative overflow-hidden rounded-[1.5rem] border p-6 transition-all hover:-translate-y-1 hover:shadow-xl ${
+                featured
+                  ? "border-navy bg-navy text-white lg:col-span-6 lg:row-span-2 lg:p-8"
+                  : "border-navy/10 bg-[#fbfaf7] text-navy lg:col-span-3"
+              }`}
+            >
+              <div className={`grid h-10 w-10 place-items-center rounded-full ${featured ? "bg-gold text-navy" : "bg-[#f3eee3] text-gold"}`}>
+                <Icon className="h-5 w-5" aria-hidden="true" />
               </div>
-              <h3 className="font-semibold text-navy text-base lg:text-lg mb-2">{service.title}</h3>
-              <p className="text-muted-foreground text-xs lg:text-sm leading-relaxed mb-3 lg:mb-4">
-                {service.description}
-              </p>
-              {(service as any).link ? (
-                <Link
-                  href={(service as any).link}
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-navy text-white text-xs lg:text-sm font-medium rounded-full hover:bg-navy-light transition-colors"
-                >
-                  Saber mais
-                  <ArrowRight className="w-3 h-3 lg:w-4 lg:h-4" />
-                </Link>
-              ) : (
-                <a
-                  href="https://wa.me/5551992851828"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-navy text-white text-xs lg:text-sm font-medium rounded-full hover:bg-navy-light transition-colors"
-                >
-                  Saber mais
-                </a>
-              )}
-            </motion.div>
+              <p className="mt-8 text-[10px] font-bold uppercase tracking-[0.18em] text-gold">{category}</p>
+              <h3 className={`mt-3 font-serif leading-tight ${featured ? "text-3xl lg:text-4xl" : "text-2xl"}`}>{title}</h3>
+              <p className={`mt-4 max-w-md text-sm leading-6 ${featured ? "text-white/65" : "text-navy/60"}`}>{description}</p>
+              <span className={`mt-8 inline-flex items-center gap-2 text-sm font-bold ${featured ? "text-gold" : "text-navy"}`}>
+                Saiba mais <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+              </span>
+              {featured && <span className="pointer-events-none absolute -bottom-16 -right-8 h-44 w-44 rounded-full border border-gold/20" aria-hidden="true" />}
+            </a>
           ))}
         </div>
       </div>
