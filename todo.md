@@ -13,3 +13,7 @@
 - [x] Verificar o aumento da foto do hero e consolidar o estilo responsivo sem conflito entre inline style e classes.
 - [x] Validar a homepage em desktop e mobile após o ajuste.
 - [ ] Salvar checkpoint da atualização da foto do hero.
+- [x] Definir variação alternativa do hero com enquadramento mais próximo do rosto.
+- [x] Implementar animação suave de entrada e carregamento sem bloquear o conteúdo.
+- [x] Garantir responsividade mobile com imagem height auto e max-height de 40vh.
+- [ ] Validar a variação e salvar checkpoint.

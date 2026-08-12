@@ -2,6 +2,7 @@
  * Design: autoridade serena — hero editorial com uma mensagem, uma prova e uma ação.
  * A fotografia usa altura automática para não criar áreas vazias ou cortes artificiais.
  */
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight, MapPin, Phone, ShieldCheck, Star } from "lucide-react";
 
@@ -9,6 +10,8 @@ const HERO_IMG =
   "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/candido-photo-nobg_57466052.png";
 
 export default function HeroSection() {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   return (
     <section className="relative overflow-hidden bg-[#fbfaf7] pt-28 pb-8 sm:pt-32 lg:pt-36 lg:pb-14">
       <div className="container">
@@ -76,10 +79,17 @@ export default function HeroSection() {
                 <ShieldCheck className="h-4 w-4 text-gold" aria-hidden="true" />
                 Atendimento personalizado
               </div>
-              <img
+              <motion.img
                 src={HERO_IMG}
                 alt="Dr. Cândido Nüske, advogado especialista em planejamento previdenciário"
-                className="mx-auto block h-auto max-h-[40vh] w-full max-w-[564px] object-contain object-bottom lg:max-h-[72vh]"
+                onLoad={() => setImageLoaded(true)}
+                initial={{ opacity: 0, filter: "blur(10px)" }}
+                animate={{
+                  opacity: imageLoaded ? 1 : 0.2,
+                  filter: imageLoaded ? "blur(0px)" : "blur(10px)",
+                }}
+                transition={{ duration: 0.7, ease: "easeOut" }}
+                className="mx-auto block h-auto max-h-[40vh] w-full max-w-[564px] origin-[50%_16%] scale-[1.16] object-contain object-bottom lg:max-h-[72vh] lg:scale-[1.28]"
               />
               <div className="absolute bottom-4 left-4 right-4 flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-white/70 bg-white/90 px-4 py-3 shadow-sm backdrop-blur sm:bottom-6 sm:left-6 sm:right-6">
                 <div className="flex items-center gap-2">
