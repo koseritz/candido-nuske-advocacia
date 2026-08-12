@@ -79,7 +79,7 @@ export default function HeroSection() {
               <img
                 src={HERO_IMG}
                 alt="Dr. Cândido Nüske, advogado especialista em planejamento previdenciário"
-                className="mx-auto block h-auto max-h-[72vh] w-full object-contain object-bottom"
+                className="mx-auto block h-auto max-h-[40vh] w-full max-w-[564px] object-contain object-bottom lg:max-h-[72vh]"
               />
               <div className="absolute bottom-4 left-4 right-4 flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-white/70 bg-white/90 px-4 py-3 shadow-sm backdrop-blur sm:bottom-6 sm:left-6 sm:right-6">
                 <div className="flex items-center gap-2">
