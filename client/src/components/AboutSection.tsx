@@ -4,7 +4,7 @@
 import { ArrowUpRight, Check, FileSearch, Handshake } from "lucide-react";
 
 const OFFICE_IMG =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310419663028569025/APPvKdKh2CfPDVSnn6tn24/office-interior-3J3tza3LGJVDXFjKGCLstJ.webp";
+  "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028569025/MmDdkfGYWdSqGvWz.png";
 
 const principles = [
   { icon: FileSearch, title: "Leitura do caso", text: "Antes de sugerir um caminho, organizamos documentos, histórico e objetivos." },

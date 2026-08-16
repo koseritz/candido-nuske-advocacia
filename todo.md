@@ -17,3 +17,6 @@
 - [x] Implementar animação suave de entrada e carregamento sem bloquear o conteúdo.
 - [x] Garantir responsividade mobile com imagem height auto e max-height de 40vh.
 - [ ] Validar a variação e salvar checkpoint.
+- [x] Verificar os novos textos do hero, da prova social e do alcance geográfico.
+- [x] Localizar a imagem do escritório e remover apenas a paisagem da janela, preservando o ambiente.
+- [x] Validar responsividade e salvar checkpoint das alterações.

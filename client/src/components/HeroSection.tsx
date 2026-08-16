@@ -30,7 +30,8 @@ export default function HeroSection() {
               Planejamento previdenciário para decidir sua aposentadoria com segurança
             </h1>
             <p className="mt-6 max-w-xl text-base leading-7 text-navy/65 sm:text-lg">
-              Análise previdenciária e atuação em direitos do trabalhador para você entender suas opções, evitar decisões caras e proteger o próximo passo.
+              O mapa estratégico e personalizado para garantir o seu futuro previdenciário e de sua família. 
+Apuramos o patrimônio previdenciário atual e planejamos os melhores cenários previdenciários, baseados em leis, contornando riscos.
             </p>
 
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
@@ -58,7 +59,7 @@ export default function HeroSection() {
                 <p className="mt-1 text-xs leading-4 text-navy/55">de experiência prática</p>
               </div>
               <div className="border-l-2 border-gold pl-3">
-                <p className="font-serif text-2xl text-navy">Brasil</p>
+                <p className="font-serif text-2xl text-navy">Brasil e Exterior</p>
                 <p className="mt-1 text-xs leading-4 text-navy/55">atendimento online</p>
               </div>
               <div className="col-span-2 border-l-2 border-gold pl-3 sm:col-span-1">
@@ -77,7 +78,7 @@ export default function HeroSection() {
             <div className="relative overflow-hidden rounded-[2rem] bg-[#eef2f3] px-4 pt-5 sm:px-8 sm:pt-8 lg:px-12 lg:pt-10">
               <div className="absolute left-6 top-6 z-10 flex items-center gap-2 rounded-full border border-white/70 bg-white/80 px-3 py-2 text-[11px] font-bold text-navy shadow-sm backdrop-blur sm:left-8 sm:top-8">
                 <ShieldCheck className="h-4 w-4 text-gold" aria-hidden="true" />
-                Atendimento personalizado
+                Planejamento personalizado
               </div>
               <motion.img
                 src={HERO_IMG}
@@ -95,11 +96,11 @@ export default function HeroSection() {
                 <div className="flex items-center gap-2">
                   <Star className="h-4 w-4 fill-gold text-gold" aria-hidden="true" />
                   <span className="text-sm font-bold text-navy">5,0</span>
-                  <span className="text-xs text-navy/55">avaliação informada</span>
+                  <span className="text-xs text-navy/55">Avaliações 5 Estrelas Google</span>
                 </div>
                 <div className="flex items-center gap-2 text-xs text-navy/60">
                   <MapPin className="h-4 w-4 text-gold" aria-hidden="true" />
-                  Porto Alegre · São Paulo · online
+                  Brasil · Exterior - Porto Alegre · São Paulo
                 </div>
               </div>
             </div>

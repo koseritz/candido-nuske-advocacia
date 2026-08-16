@@ -8,19 +8,19 @@ const highlights = [
     icon: Compass,
     eyebrow: "Experiência",
     value: "18 anos",
-    text: "de atuação jurídica e leitura estratégica de casos",
+    text: "Atuação jurídica de excelência com estratégias sólidas para as melhores soluções",
   },
   {
     icon: Scale,
     eyebrow: "Registro",
     value: "OAB/RS 7.089",
-    text: "atuação profissional com atendimento em todo o Brasil",
+    text: "Atuação profissional com atendimento em todo o Brasil e Exterior.",
   },
   {
     icon: Check,
     eyebrow: "Método",
     value: "Clareza antes da decisão",
-    text: "orientação organizada para você saber o próximo passo",
+    text: "Esclarecimentos precisos sobre a estratégia a ser adotada",
   },
 ];
 
@@ -45,7 +45,7 @@ export default function StatsSection() {
         ))}
       </div>
       <div className="container flex flex-col gap-3 border-t border-navy/10 py-4 text-sm sm:flex-row sm:items-center sm:justify-between">
-        <p className="text-navy/55">Previdência, trabalho e decisões que merecem análise.</p>
+        <p className="text-navy/55">O seu futuro previdenciário e de sua família é nossa responsabilidade!</p>
         <a href="#servicos" className="inline-flex items-center gap-2 font-bold text-navy hover:text-gold">
           Ver como podemos ajudar <ArrowRight className="h-4 w-4" aria-hidden="true" />
         </a>
