@@ -705,7 +705,7 @@ export default function Previdenciario() {
             Advogado &middot; Especialista em Planejamento Previdenciário
             &middot; Especialista em Direito Tributário
             <br />
-            Porto Alegre – RS &nbsp;&middot;&nbsp; São Paulo – SP
+            Brasil & Exterior &nbsp;&middot;&nbsp; Porto Alegre – RS &nbsp;&middot;&nbsp; São Paulo – SP
             <br />
             51 99285-1828 &nbsp;&middot;&nbsp; 11 96383-6040 &nbsp;&middot;&nbsp; contato@candidonuske.adv.br
             <br />

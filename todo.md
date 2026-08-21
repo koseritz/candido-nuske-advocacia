@@ -20,3 +20,6 @@
 - [x] Verificar os novos textos do hero, da prova social e do alcance geográfico.
 - [x] Localizar a imagem do escritório e remover apenas a paisagem da janela, preservando o ambiente.
 - [x] Validar responsividade e salvar checkpoint das alterações.
+- [x] Atualizar rodapé e página previdenciária com "Brasil e Exterior".
+- [x] Corrigir "nosso responsabilidade" para "nossa responsabilidade" e refinar o texto para tom jurídico adequado.
+- [x] Validar build, tipos e salvar checkpoint.

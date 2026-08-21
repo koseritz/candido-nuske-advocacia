@@ -35,7 +35,7 @@ export default function Footer() {
             <div className="mt-4 flex flex-col gap-3 text-sm text-white/65">
               <a href="mailto:contato@candidonuske.adv.br" className="flex items-start gap-2 hover:text-gold"><Mail className="mt-0.5 h-4 w-4 shrink-0 text-gold" /> contato@candidonuske.adv.br</a>
               <a href="tel:+5551992851828" className="flex items-start gap-2 hover:text-gold"><Phone className="mt-0.5 h-4 w-4 shrink-0 text-gold" /> (51) 99285-1828</a>
-              <span className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold" /> Porto Alegre · São Paulo · online</span>
+              <span className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold" /> Brasil · Exterior · Porto Alegre · São Paulo</span>
             </div>
           </div>
         </div>
